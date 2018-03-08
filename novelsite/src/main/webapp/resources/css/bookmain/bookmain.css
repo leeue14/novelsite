@@ -1,0 +1,898 @@
+body{
+    background-color: #f5f5f5;
+    color: #666;
+}
+.mainbox{
+    background: #FFFFFF;
+    width: 1002px;
+}
+.mainbox .main1{
+    height: 95px;
+    width: 1002px;
+    margin-bottom: 10px;
+    background: url(../../images/bookmain/bg_top.gif) 0 0 repeat-x;
+    position: relative;
+    z-index: 2;
+}
+.mainbox .main1 .title {
+    font: 20px/20px "Microsoft Yahei";
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+.mainbox .main1 .title b {
+    padding-right: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #900;
+}
+.mainbox .main1 .title i {
+    font-size: 12px;
+    font-style: normal;
+    font-family: "宋体";
+}
+.mainbox .main1 .title span {
+    color: #999;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.wrap .mainbox .main1 .auther {
+    position: absolute;
+    right: 160px;
+    margin-top: 18px;
+}
+.mainbox .main1 .tablist {
+    position: absolute;
+    height: 40px;
+    bottom: 0;
+    _bottom: -1px;
+    left: 0;
+    border-left: 1px solid #ccc;
+}
+
+.mainbox .main1 .tablist ul .this {
+    width: 98px;
+    height: 39px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    color: #333;
+    background: #FFF;
+    line-height: 39px;
+}
+
+.mainbox .main1 .tablist ul li a.active {
+    line-height: 39px;
+    width: 86px;
+    height: 40px;
+}.mainbox .main1 .tablist ul .midline {
+     width: 1px;
+     float: left;
+     height: 40px;
+     line-height: 39px;
+ }
+
+
+.mainbox .main1 .tablist ul li {
+    float: left;
+    height: 40px;
+    width: 86px;
+    text-align: center;
+    font: 15px/39px "Microsoft Yahei";
+    color: #333;
+    position: relative;
+}
+/*作者简介和作者*/
+.mainbox .main2 {
+    height: 430px;
+    width: 1000px;
+    margin-bottom: 10px;
+}
+.mainbox .main2 .left {
+    padding: 1px;
+    height: 428px;
+    width: 783px;
+    border: 1px solid #ccc;
+    position: relative;
+    float: left;
+    color: #333;
+    z-index: 1;
+    background: #FFF;
+}
+.mainbox .main2 .left .cover {
+    height: 255px;
+    width: 204px;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 20px;
+    top: 31px;
+}
+.mainbox .main2 .button1 {
+    width: 216px;
+    height: 100px;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+}
+.main2 .button1 a.but01 {
+    background-position: 0 0;
+}
+.mainbox .main2 .button1 a {
+    width: 100px;
+    height: 30px;
+    display: block;
+    background-image: url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/bg01.gif);
+}
+.main2 .button1 a.but02 {
+    font: 15px/35px '\5FAE\8F6F\96C5\9ED1';
+    text-align: center;
+    text-indent: 20px;
+    color: #FFF;
+    height: 35px;
+    background-position: 0 -60px;
+}
+.mainbox .main2 .button1 a {
+    width: 100px;
+    height: 30px;
+    display: block;
+    background-image: url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/bg01.gif);
+}
+.main2 .button1 a.but03 {
+    background-position: 0 -30px;
+}
+.mainbox .main2 .button1 a {
+    width: 100px;
+    height: 30px;
+    display: block;
+    background-image: url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/bg01.gif);
+}
+.main2 .button1 a.but04 {
+    background-position: 0 -95px;
+}
+.mainbox .main2 .button1 a {
+    width: 100px;
+    height: 30px;
+    display: block;
+    background-image: url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/bg01.gif);
+}
+.mainbox .main2 .title {
+    width: 495px;
+    height: 33px;
+    line-height: 33px;
+    position: absolute;
+    top: 22px;
+    right: 35px;
+    padding-left: 5px;
+}
+.mainbox .main2 .num {
+    position: absolute;
+    top: 60px;
+    right: 43px;
+    _right: 35px;
+    width: 490px;
+    height: 40px;
+}
+.mainbox .main2 .num table {
+    width: 500px;
+    height: 31px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+}
+.mainbox .main2 .num table td {
+    padding-left: 10px;
+}
+.mainbox .main2 .left .info {
+    position: absolute;
+    height: 150px;
+    width: 485px;
+    padding: 0 15px 15px 15px;
+    right: 18px;
+    top: 150px;
+    overflow: hidden;
+    line-height: 24px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.mainbox .main2 .left .info p {
+    text-indent: 2em;
+}
+.mainbox .main2 .tags {
+    position: absolute;
+    bottom: 40px;
+    right: 35px;
+    width: 490px;
+    color: #666;
+    line-height: 1;
+}
+.mainbox .main2 .right {
+    float: right;
+    height: 430px;
+    width: 205px;
+}
+/*左边作者*/
+.autherinfo {
+    width: 203px;
+    height: 255px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 1px solid #ccc;
+    background: #fafafa;
+}
+.autherinfo a.head {
+    position: absolute;
+    top: 19px;
+    left: 10px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #b5b5b5;
+    padding: 1px;
+}
+.autherinfo .au_name {
+    position: absolute;
+    top: 19px;
+    left: 70px;
+    width: 112px;
+    height: 25px;
+    line-height: 2;
+}
+#textauthor {
+    color: #000;
+}
+.autherinfo .shortintro {
+    position: absolute;
+    width: 182px;
+    height: 115px;
+    line-height: 22px;
+    color: #666;
+    top: 100px;
+    left: 10px;
+    overflow: hidden;
+}
+
+/*<!-- 最新章节、作品信息、隆重推荐、作者其他作品 -->*/
+.mainbox .main3{
+    width: 1000px;
+    height: 251px;
+    margin-bottom: 10px;
+}
+.main3 .middle {
+    width: 787px;
+    height: 251px;
+    float: left;
+    margin-left: 0;
+    position: relative;
+}
+.main3 .middle .tab {
+    height: 38px;
+    width: 550px;
+    background: #f8f8f8;
+    position: static;
+}
+.main3 .middle .tab h1.choice {
+    z-index: 2;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-image: url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/boxtopbg.gif);
+    height: 36px;
+    background-repeat: repeat-x;
+    background-position: top;
+    font-weight: 700;
+}
+.main3 .middle .tab .tab2left {
+    left: 0;
+}
+.main3 .middle .tab h1 {
+    position: absolute;
+    text-align: center;
+    width: 111px;
+    height: 36px;
+    font: 14px/36px "Microsoft Yahei";
+    border: 1px solid #ccc;
+}
+.tab h1.choice {
+    z-index: 2;
+    border-bottom: none;
+    background: #f8f8f8 url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/boxtop01.gif) top;
+    font-weight: 700;
+}
+.tab h1 {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 37px;
+    font: 12px/37px "Microsoft Yahei";
+    border: 1px solid #ccc;
+    background: #FFF;
+}
+.main3 .middle .tab .tab2right {
+    left: 111px;
+}
+.main3 .middle .tab .tab2right a{
+    font-weight: 900;
+}
+.main3 .middle .tab .tabnext {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 562px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background: #f8f8f8;
+}
+#bdshare {
+    _overflow-x: hidden;
+    z-index: 999999;
+    padding-bottom: 2px;
+    font-size: 12px;
+    float: left;
+    text-align: left!important;
+    zoom: 1;
+}
+
+.main3 .middle .swishlist .chaptername {
+    height: 38px;
+    position: absolute;
+    top: 0px;
+    left: 27px;
+    line-height: 38px;
+    font-size: 14px;
+    color: #333;
+}
+.swishlist{
+    width: 200px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background: #fafafa;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, a, blockquote, th {
+    margin: 0;
+    padding: 0;
+}
+.main3 .middle .tab .tabnext {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 562px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background: #f8f8f8;
+}
+.main3 .middle .swishlist {
+    width: 785px;
+    _width: 784px;
+    height: 212px;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: relative;
+    color: #333;
+   
+}
+.main3 .middle .swishlist .chapternev {
+    line-height: 22px;
+    width: 720px;
+    height: 117px;
+    position: absolute;
+    top: 26px;
+    left: 17px;
+   
+    overflow: hidden;
+    padding: 11px;
+    padding-top: none;
+}
+.main3 .middle .swishlist .chapternev a {
+    color: #666;
+    overflow: hidden;
+}
+.main3 .middle .swishlist .chapternev p {
+    text-indent: 2em;
+    line-height: 22px;
+}
+.main3 .middle .swishlist .btnlist {
+    position: absolute;
+    width: 157px;
+    height: 26px;
+    bottom: 10px;
+    right: 29px;
+}
+.main3 .middle .swishlist table {
+    margin: 0 20px;
+    width: 500px;
+    line-height: 33px;
+}
+.main3 .middle .swishlist a.read {
+    background: url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/bg01.gif) 0px -741px no-repeat;
+    width: 90px;
+    height: 26px;
+    position: absolute;
+    display: block;
+    float: left;
+}
+.main3 .middle .swishlist a.index {
+    background: url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/bg01.gif) 0px -767px no-repeat;
+    width: 57px;
+    height: 26px;
+    display: block;
+    float: right;
+}
+.main3 .middle .swishlist table td {
+    border-bottom: 1px dotted #ccc;
+    padding-left: 20px;
+}
+.green {
+    color: #360;
+}
+.main3 .right {
+    width: 203px;
+    height: 249px;
+    float: right;
+}
+.authorRec {
+    border-top: none;
+}
+.otherbook {
+    width: 205px;
+    height: 250px;
+}
+.tab {
+    position: relative;
+    width: 205px;
+    height: 38px;
+}
+.tab .tableft {
+    left: 0;
+}
+.tab .tabright {
+    right: 2px;
+}
+.tab h1 {
+    position: absolute;
+    text-align: center;
+    width: 201px;
+    height: 37px;
+    font: 12px/37px "Microsoft Yahei";
+    border: 1px solid #ccc;
+    background: #FFF;
+}
+.otherList {
+    border: 1px solid #CCC;
+    width: 186px;
+    height: 212px;
+    background: #fafafa;
+    padding-left: 15px;
+    line-height: 22px;
+    border-top: none;
+    overflow: hidden;
+}
+.main3 .right ul {
+    margin-left: auto;
+    margin-right: auto;
+}
+.main3 ul {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8px;
+    width: 181px;
+}
+.main3 .right ul li {
+    height: 28px;
+    line-height: 28px;
+}
+.otherList li {
+    float: left;
+    width: 88px;
+    height: 22px;
+    line-height: 22px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/*评论区*/
+.mainbox .main5 {
+    width: 1000px;
+    line-height: 21px;
+    overflow: hidden;
+    word-wrap: break-word;
+    /**/
+    border-right: 1px solid #CCC;
+}
+.main5 .left {
+    width: 783px;
+    border: 1px solid #CCC;
+    float: left;
+}
+.main5 .comment_top {
+    clear: both;
+}
+.topfill {
+    background-image: url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/boxtopbg2.png);
+    height: 36px;
+    background-repeat: repeat-x;
+    background-position: top;
+    padding-left: 15px;
+    font: 14px/36px "Microsoft Yahei";
+}
+.redsqu {
+    padding-left: 15px;
+    background: url(http://img1.chuangshi.qq.com/chuangshi/p1/ico/red_ico.gif) no-repeat left;
+}
+
+.title01 {
+    float: left;
+}
+.main5 .left .bz {
+    float: right;
+    margin-right: 15px;
+    font: 12px/38px "宋体";
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 14px;
+}
+
+/*评论输入框*/
+.comment_box {
+    z-index: 2;
+    width: 720px;
+    height: 270px;
+    margin-left: 35px;
+    margin-right: auto;
+    background: url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/bg02.gif) 70px -468px no-repeat;
+    position: relative;
+}
+.yanzheng_code {
+    position: absolute;
+    top: 230px;
+    left: 330px;
+    z-index: 100;
+}
+.codeinput{
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 5px;
+ /*   margin-top: -14px;*/
+    width: 70px;
+    line-height: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+}
+a {
+    outline: none;
+    color: #666;
+    text-decoration: none;
+}
+.comment_box .inputtitle {
+    background: url(http://img1.chuangshi.qq.com/chuangshi/p1/cxl_other/inputtitle.gif) 0 0 no-repeat;
+    width: 426px;
+    height: 29px;
+    position: absolute;
+    top: 50px;
+    left: 85px;
+    border: 0;
+    line-height: 29px;
+    padding-left: 10px;
+}
+.comment_box .leftword {
+    position: absolute;
+    /*top: 213px;*/
+    top:219px;
+    right: 130px;
+    line-height: 40px;
+}
+.red {
+    font-weight: 700;
+    color: #900;
+}
+.comment_box .head {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    padding: 1px;
+    border: 1px solid #ccc;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.comment_box .input {
+    width: 618px;
+    position: absolute;
+    top: 90px;
+    left: 80px;
+}
+
+.Introduction, .Introduction2 {
+    font: 12px/18px "宋体";
+    margin-left: 5px;
+    width: 598px;
+    border: none;
+    overflow: hidden;
+}
+.comment_box .rightbtn {
+    height: 40px;
+    position: absolute;
+    right: 40px;
+    text-align: left;
+    top: 213px;
+}
+.comment_box .rightbtn {
+    height: 40px;
+    position: absolute;
+    top: 190px;
+    right: 40px;
+    text-align: left;
+}
+.comment_box .rightbtn a {
+    height: 25px;
+    line-height: 25px;
+    margin-top: 14px;
+    padding: 0;
+    cursor: pointer;
+}
+.Introduction2 {
+    text-indent: 2px;
+    height: 90px;
+    border: 1px solid #ccc;
+}
+.comment_submit {
+    background: url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/bg03.gif) no-repeat scroll -45px -151px transparent;
+    color: #333;
+    display: block;
+    float: right;
+    font: 12px/25px "microsoft yahei";
+    height: 25px;
+    text-align: center;
+    width: 66px;
+}
+
+.main5 .left .tablist {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-bottom: 2px solid #EAEAEA;
+}
+.main5 .left .tablist .tabword {
+    width: 579px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    z-index: 1;
+}
+.main5 .left .tablist .tab3left {
+    width: 74px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 83px;
+    border-bottom: 2px solid #EAEAEA;
+}
+.main5 .left .tablist .tabmid {
+    width: 9px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 75px;
+    border-bottom: 2px solid #EAEAEA;
+}
+.main5 .left .tablist .choice {
+    font-weight: bold;
+    height: 40px;
+    border-bottom: 2px solid #666;
+}
+.main5 .left .tablist .tab3right {
+    width: 74px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: 2px solid #EAEAEA;
+}
+.main5 .left .tablist .choice a {
+    color: #900;
+}
+
+/*评论列表*/
+.main5 ul {
+    width: 181px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8px;
+}
+.main5 .left .comment_list li {
+    font: 12px/22px "宋体";
+    width: 720px;
+    height: 163px;
+    position: relative;
+    border-bottom: 1px dotted #CCC;
+    z-index: 1;
+}
+.main5 .left .comment_list {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8px;
+}
+.main5 .left .comment_list li {
+    font: 12px/22px "宋体";
+    width: 720px;
+    height: 163px;
+    position: relative;
+    border-bottom: 1px dotted #CCC;
+    z-index: 1;
+}
+.main5 .left .comment_list li .head {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    padding: 1px;
+    border: 1px solid #CCC;
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.main5 .left .comment_list li .title {
+    width: 645px;
+    height: 22px;
+    background: #EAEAEA;
+    position: absolute;
+    top: 15px;
+    left: 68px;
+    padding-left: 5px;
+}
+li .title .grey3, li .title .f900 {
+    font-size: 14px;
+}
+.main5 .left .comment_list li .nev {
+    position: absolute;
+    top: 76px;
+    left: 82px;
+    height: 50px;
+    overflow: hidden;
+    line-height: 25px;
+    width: 630px;
+}
+.main5 .left .comment_list li .time {
+    position: absolute;
+    top: 133px;
+    left: 82px;
+    color: #999;
+}
+.main5 .left .comment_list li .name {
+    position: absolute;
+    top: 48px;
+    left: 82px;
+}
+.main5 .left .comment_list li .replybox {
+    position: absolute;
+    bottom: 9px;
+    right: 66px;
+}
+.main5 .left .comment_list li .tabl {
+    display: none;
+}
+.main5 .left .comment_list li b {
+    font-weight: normal;
+}
+.main5 .right {
+    width: 205px;
+    float: right;
+}
+.main5 .right .list04 {
+    border: 1px solid #CCC;
+    width: 203px;
+    margin-bottom: 10px;
+}
+.topfill {
+    background-image: url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/boxtopbg2.png);
+    height: 36px;
+    background-repeat: repeat-x;
+    background-position: top;
+    padding-left: 15px;
+    font: 14px/36px "Microsoft Yahei";
+}
+.redsqu {
+    padding-left: 15px;
+    background: url(http://img1.chuangshi.qq.com/chuangshi/p1/ico/red_ico.gif) no-repeat left;
+}
+
+/*分页*/
+.page{
+    height: 40px;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.page a{
+    border: 1px solid #E8e8e8;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px 10px;
+    display: inline-block;/*让a标签有行内元素的功能也有块级元素的功能*/
+}
+.page a:link,.page a:visited{
+    color: #090909;
+}
+.page a:hover,.page a:active{
+    color: #ffffff;
+    background-color: red;
+}
+
+/*目录*/
+.indexbox {
+    display: block;
+
+}
+.huanyuan{
+    width: 150px;
+}
+.indexbox .index_area {
+    width: 1000px;
+    float: left;
+}
+.indexbox .list {
+	min-height:729px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.topfill {
+    background-image: url(http://img1.chuangshi.qq.com/chuangshi/p1/bookinfo/boxtopbg2.png);
+    height: 36px;
+    background-repeat: repeat-x;
+    background-position: top;
+    padding-left: 15px;
+    font: 14px/36px "Microsoft Yahei";
+}
+.indexbox .list .juan_height {
+    line-height: 48px;
+    height: 48px;
+}
+.redsqu {
+    padding-left: 15px;
+    background: url(http://img1.chuangshi.qq.com/chuangshi/p1/ico/red_ico.gif) no-repeat left;
+}
+.title01 {
+    float: left;
+}
+.indexbox .list .right_juan {
+    float: right;
+    margin-right: 15px;
+    font: 12px/36px "宋体";
+    color: #666;
+}
+.indexbox .list .block_ul {
+    width: 935px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 39px;
+    margin-top: 20px;
+    margin-bottom: 37px;
+    _margin-bottom: 0px;
+}
+.indexbox .list .block_ul li {
+    valign: top;
+    width: 295px;
+    border-bottom: 1px dotted #ccc;
+    line-height: 20px;
+    padding: 9px 0px 9px 5px;
+    float: left;
+    margin-right: 10px;
+}
+.indexbox .list .block_ul li .title {
+    float: left;
+    font-weight: normal;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #360;
+}
+.green {
+    color: #360;
+}

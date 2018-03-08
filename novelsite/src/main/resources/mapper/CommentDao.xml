@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- 要按照 mybatis-3-mapper.dtd 来命名标签 -->
+
+<mapper namespace="com.leeue.novel.dao.CommentDao"> <!--namespace里面写是那个Dao -->
+	<!-- 增加评论 -->
+	<insert id="insertComment" useGeneratedKeys="true" keyColumn="comment_id"
+		keyProperty="commentId">
+		INSERT INTO
+		tb_comment(comment_id,book_id,reader_id,nick_name,body,date,good_click,book_name,priority,comment_title)
+		VALUES
+		(#{commentId},#{bookId},#{readerId},#{nickName},#{body},#{date},#{goodClick},#{bookName},#{priority},#{commentTitle})
+	</insert>
+	
+	<!-- 查询所有的评论 -->
+	<select id="queryAllComment"  resultType="com.leeue.novel.entity.Comment">
+		SELECT
+		comment_id,book_id,reader_id,nick_name,body,date,good_click,book_name,priority,comment_title
+		FROM
+		tb_comment
+		ORDER BY priority DESC
+	</select>
+	
+	<!--  根据book_id查询评论-->
+	
+	<select id="queryComment"  resultType="com.leeue.novel.entity.Comment">
+		SELECT
+		comment_id,book_id,reader_id,nick_name,body,date,good_click,book_name,priority,comment_title
+		FROM
+		tb_comment
+		WHERE book_id = #{bookId}
+		ORDER BY priority DESC
+		limit #{start},#{end}
+	</select>
+	
+		<!--  根据book_id查询总评论数目-->
+	<select id="queryAllCommentByBookId"  parameterType="java.lang.String" resultType="int">
+		SELECT
+		COUNT(1)
+		FROM
+		tb_comment
+		WHERE book_id = #{bookId}
+		ORDER BY priority DESC
+	</select>
+	
+	<!-- 删除评论 -->
+		<delete id="deleteComment" parameterType="java.lang.Long">
+		DELETE FROM tb_comment
+		where comment_id = #{commentId}
+	</delete>
+</mapper>

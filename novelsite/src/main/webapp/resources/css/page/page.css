@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+
+/*分业*/
+
+
+.c-full-page {
+    float: right;
+}
+.c-full-page {
+    clear: both;
+    display: inline-block;
+    margin: 15px 0;
+    color: #999;
+    font-size: 12px;
+}
+.c-full-page .total {
+    float: left;
+    margin-right: 15px;
+    line-height: 30px;
+}
+.c-gold {
+    color: #cab389;
+}
+.c-full-page .next, .c-full-page .prev {
+    float: left;
+    line-height: 30px;
+    color: #999;
+}
+.c-full-page .pageNumber {
+    float: left;
+    margin: 0 5px;
+}
+.c-full-page .jump {
+    float: left;
+    margin-left: 10px;
+}
+.c-full-page .pageNumber li.active {
+    background: #cab389;
+}
+.c-full-page .pageNumber li {
+    float: left;
+    min-width: 25px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.c-full-page .jump .page-input {
+    width: 35px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border: 1px solid #cab389;
+}
+.c-full-page .jump .page-go {
+    width: 35px;
+    height: 30px;
+    margin-left: 5px;
+    color: #fff;
+    border: 0 none;
+    background: #cab389;
+    cursor: pointer;
+}

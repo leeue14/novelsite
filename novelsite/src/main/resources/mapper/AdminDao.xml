@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- 要按照 mybatis-3-mapper.dtd 来命名标签 -->
+
+
+<mapper namespace="com.leeue.novel.dao.AdminDao"> <!--namespace里面写是那个Dao -->
+	<!-- 增加 -->
+
+	<insert id="insertAdmin" useGeneratedKeys="true" keyColumn="admin_id"
+		keyProperty="adminId">
+		INSERT INTO
+		tb_admin(admin_name,password,power,email)
+		values
+		(#{adminName},#{password},#{power},#{email})
+	</insert>
+	<!-- 删除 -->
+	<delete id="deleteAdmin">
+		DELETE FROM tb_admin
+		where admin_id = #{adminId}
+	</delete>
+
+	<!-- 查找 -->
+
+	<select id="findAdmin" resultType="com.leeue.novel.entity.Admin">
+		SELECT
+		admin_id,admin_name,password,power,email
+		FROM
+		tb_admin
+		WHERE
+		email =
+		#{email}
+	</select>
+
+	<!-- 查找所有的管理员 -->
+	<select id="findAdmins" resultType="com.leeue.novel.entity.Admin">
+		SELECT
+		admin_id,admin_name,password,power,email
+		FROM
+		tb_admin
+	</select>
+
+	<!-- 修改管理员权限 -->
+
+	<update id="editAdminPower" parameterType="com.leeue.novel.entity.Admin">
+		UPDATE tb_admin
+		<set>
+			<if test="power != null">power= #{power}</if>
+		</set>
+		WHERE
+		admin_id =
+		#{adminId}
+	</update>
+
+
+</mapper>

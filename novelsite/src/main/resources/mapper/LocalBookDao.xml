@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- 要按照 mybatis-3-mapper.dtd 来命名标签 -->
+
+
+<mapper namespace="com.leeue.novel.dao.LocalBookDao">
+	<!-- 书籍的增加 -->
+	<insert id="insertBook" useGeneratedKeys="true" keyColumn="book_id"
+		keyProperty="bookId">
+		INSERT INTO
+		tb_book(name,author_id,author_name,category_id,recommend_ticket,click_count,
+		collect_count,words_num,update_time,month_click,week_click,cover,cat,short_info,status,create_time,is_vip,site,priority)
+		VALUES
+		(#{name},#{authorId},#{authorName},#{categoryId},#{recommendTicket},#{clickCount},#{collectCount},#{wordsNum},
+		#{updateTime},#{monthClick},#{weekClick},#{cover},#{cat},#{shortInfo},#{status},#{createTime},#{isVip},#{site},#{priority})
+	</insert>
+
+	<!-- 书籍信息的更新 -->
+	<update id="updateBook" parameterType="com.leeue.novel.entity.Book">
+		UPDATE tb_book
+		<set>
+			<if test="name != null"> name = #{name},</if>
+			<if test="categoryId != null">category_id = #{categoryId},</if>
+			<if test="recommendTicket != null">recommend_ticket = #{recommendTicket},</if>
+			<if test="clickCount != null">click_count = #{clickCount},</if>
+			<if test="collectCount != null">collect_count = #{collectCount},</if>
+			<if test="wordsNum != null">words_num = #{wordsNum},</if>
+			<if test="updateTime != null">update_time = #{updateTime},</if>
+			<if test="monthClick != null">month_click = #{monthClick},</if>
+			<if test="weekClick != null">week_click = #{weekClick},</if>
+			<if test="cover != null">cover = #{cover},</if>
+			<if test="cat != null">cat = #{cat},</if>
+			<if test="shortInfo != null">short_info = #{shortInfo},</if>
+			<if test="status != null">status = #{status},</if>
+			<if test="isVip != null">is_vip = #{isVip},</if>
+			<if test="isVip != null">priority = #{priority}</if>
+		</set>
+		where book_id = #{bookId}
+	</update>
+
+	<!-- 查询书籍信息 -->
+	<select id="queryBookByCondition" parameterType="java.lang.String"
+		resultType="com.leeue.novel.entity.Book">
+		SELECT
+		book_id,
+		name,author_id,category_id,recommend_ticket,click_count,
+		collect_count,words_num,update_time,month_click,week_click,cover,cat,short_info,status,create_time,is_vip,priority
+		FROM
+		tb_book
+		<where>
+			<if test="bookCodition != null">
+
+				<if test="bookCodition.name != null">
+					AND name= #{bookCodition.name}
+				</if>
+				<if test="bookCodition.authorId != null">
+					AND author_id= #{bookCodition.authorId}
+				</if>
+			</if>
+		</where>
+	</select>
+
+	<!--根据书名查询 -->
+	<select id="queryBookByName" parameterType="java.lang.String"
+		resultType="com.leeue.novel.entity.Book">
+		SELECT
+		book_id,
+		name,author_id,category_id,recommend_ticket,click_count,
+		collect_count,words_num,update_time,month_click,week_click,cover,cat,short_info,status,create_time,is_vip,priority
+		FROM
+		tb_book
+		<where>
+			<if test="bookName != null">
+				AND name= #{bookName}
+			</if>
+		</where>
+	</select>
+	
+	<!--根据id查询 -->
+	<select id="queryBookById" parameterType="java.lang.Long"
+		resultType="com.leeue.novel.entity.Book">
+		SELECT
+		book_id,
+		name,author_id,author_name,category_id,recommend_ticket,click_count,
+		collect_count,words_num,update_time,month_click,week_click,cover,cat,short_info,status,create_time,is_vip,site,priority
+		FROM
+		tb_book
+		<where>
+			<if test="bookId != null">
+				AND book_id= #{bookId}
+			</if>
+		</where>
+	</select>
+	
+	<!--根据作者名 或书名 模糊查询 -->
+	<select id="queryLikeBook" parameterType="java.lang.String"
+		resultType="com.leeue.novel.entity.Book">
+		SELECT
+		book_id,
+		name,author_id,author_name,category_id,recommend_ticket,click_count,
+		collect_count,words_num,update_time,month_click,week_click,cover,cat,short_info,status,create_time,is_vip,site,priority
+		FROM
+		tb_book
+		<where>
+			<if test="name != null">
+				NAME LIKE '%${name}%' OR author_name LIKE '%${name}%'
+			</if>
+		</where>
+	</select>
+</mapper>

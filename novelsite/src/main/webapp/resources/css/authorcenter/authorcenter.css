@@ -1,0 +1,819 @@
+body, .wrap.login {
+    background: #FFF;
+    width: 100%;
+    margin: 0 auto;
+    position: inherit;
+}
+.header {
+    position: relative;
+    z-index: 10;
+    border-top: 3px solid #50A8FF;
+    border-bottom: 1px solid #DDD;
+    background: #FFF;
+}
+.headUser {
+    position: absolute;
+    right: 0;
+    padding-top: 18px;
+    _width: 300px;
+}
+.headUser .exit {
+    font-size: 14px;
+}
+.pageCenter {
+    width: 1180px;
+    margin: auto;
+}
+.headBox {
+    position: relative;
+    height: 58px;
+}
+.cf {
+    zoom: 1;
+}
+.pageCenter {
+    width: 1180px;
+    margin: auto;
+}
+.headBox {
+    position: relative;
+    height: 58px;
+}
+.headBox .logo {
+    width: 190px;
+    height: 28px;
+    margin-top: 14px;
+}
+.loginWrap {
+    position: relative;
+    padding: 186px 0 130px;
+}
+.loginWrap img {
+    margin-top: 40px;
+}
+.login-box {
+    float: right;
+    width: 400px;
+}
+
+/*中间内容部分*/
+
+.pageCenter {
+    width: 1180px;
+    margin: auto;
+}
+.mainWrap {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-top: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    border-left: 1px solid #DDD;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background: #FFF;
+}
+.mainLeft {
+    position: relative;
+    z-index: 2;
+    width: 138px;
+    min-height: 200px;
+    background: #FFF;
+}
+.sideBar li.act {
+    background: #50A8FF;
+}
+.sideBar li {
+    position: relative;
+    z-index: 2;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    transition: background .3s;
+}
+.sideBar li.act a {
+    color: #FFF;
+}
+.sideBar li a {
+    display: block;
+    font-size: 14px;
+}
+.sideBar li.act span.home {
+    background-position: -80px -260px;
+}
+.sideBar li span.home {
+    width: 22px;
+    height: 22px;
+    margin-top: -1px;
+    background-position: -40px -260px;
+}
+.icon, .sideBar ul li span {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../../images/authorcenter/sprite.png);
+    background-repeat: no-repeat;
+}
+.sideBar li span {
+    display: inline-block;
+    width: 19px;
+    height: 18px;
+    margin: -5px 16px 0 0;
+    vertical-align: middle;
+}
+.sideBar li span.works {
+    width: 18px;
+    height: 16px;
+    margin-top: -1px;
+    background-position: 0 -40px;
+}
+.sideBar li span.income {
+    background-position: 0 -57px;
+}
+
+/*右边内容*/
+.mainRight {
+    position: relative;
+    z-index: 1;
+    border-left: 1px solid #DDD;
+    width: 1041px;
+    min-height: 880px;
+    padding-bottom: 25px;
+    background: #FFF;
+}
+.authorInfoWrap {
+    border-bottom: 1px solid #D0E9FF;
+    height: 101px;
+    padding-top: 14px;
+    padding-left: 35px;
+    background: #D1E8FD url(../../images/authorcenter/hbg.png) no-repeat;
+}
+.headPhotoBox {
+    position: relative;
+    width: 86px;
+    height: 86px;
+    margin-right: 19px;
+}
+.headPhotoBox span {
+    position: absolute;
+    z-index: 2;
+    width: 86px;
+    height: 86px;
+    background: url(../../images/authorcenter/photo_box.png) no-repeat;
+}
+.headPhotoBox img {
+    position: absolute;
+    z-index: 1;
+}
+.authorInfoBox h3 {
+    margin: 10px 0 15px;
+    font: 700 16px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    color: #376590;
+}
+.authorInfoBox p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #8BAECE;
+}
+/*新闻部分*/
+.midContentWrap {
+    padding: 30px 0 0 35px;
+}
+.title_h3 {
+    margin-bottom: 10px;
+    font: 18px/1 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif";
+}
+.newsListWrap {
+    border: 1px solid #E6E6E6;
+    border-bottom: none;
+    width: 969px;
+    margin-bottom: 10px;
+}
+.icon.news {
+    width: 23px;
+    height: 22px;
+    margin: -3px 10px 0 0;
+    background-position: 0 -133px;
+}
+.icon, .sideBar ul li span {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../../images/authorcenter/sprite.png);
+    background-repeat: no-repeat;
+}
+.newsListWrap li {
+    border-bottom: 1px solid #E6E6E6;
+}
+.newsListWrap li a.link.visited {
+    color: #999;
+}
+.newsListWrap li a.link {
+    display: block;
+    padding: 0 20px;
+    font: 14px/41px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    vertical-align: middle;
+    color: #333;
+}
+.newsListWrap li a.link em {
+    float: right;
+    font-size: 12px;
+    cursor: pointer;
+}
+.newsListWrap li a.link span {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 18px 0 0;
+    cursor: pointer;
+    vertical-align: middle;
+    background: url(../../images/authorcenter/sprite.png) no-repeat -38px -7px;
+}
+.newsListWrap li a.link span.on {
+    margin: 0 18px 0 0;
+    background: url(../../images/authorcenter/sprite.png) no-repeat -38px 0;
+}
+
+.pageBox {
+    padding-right: 34px;
+}
+.pageBox span {
+    margin-right: 14px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+.pageBox a.nextBtn, .pageBox a.prevBtn {
+    position: relative;
+    width: 26px;
+}
+.pageBox a {
+    display: inline-block;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    height: 26px;
+    vertical-align: middle;
+}
+.pageBox input {
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    width: 58px;
+    height: 26px;
+    margin: 0 10px;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+.pageBox a.jump {
+    width: 50px;
+    margin-right: 0;
+    font: 14px/26px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    text-align: center;
+    color: #666;
+}
+.pageBox a {
+    display: inline-block;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px;
+    height: 26px;
+    vertical-align: middle;
+}
+.newsListWrap li a:hover {
+    color: #666;
+    background: #F6FBFF;
+    border: 1px solid #E6E6E6;
+}
+
+
+/*作品管理*/
+
+.crumbsWrap {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #E6E6E6;
+    height: 45px;
+    padding-left: 18px;
+    background: #F9F9F9;
+}
+.crumbsWrap span {
+    display: inline-block;
+    font: 14px/44px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    vertical-align: middle;
+    transition: color .3s;
+}
+.msgBoxTitle {
+    position: relative;
+    border-bottom: 1px solid #E6E6E6;
+    height: 23px;
+    padding: 31px 0 0 35px;
+}
+.msgBoxTitle p {
+    line-height: 1;
+    color: #999;
+}
+.f12 {
+    font-size: 12px;
+}
+.Num {
+    margin: 0 5px;
+    font-family: Arial;
+}
+.blue {
+    color: #4EA8FF;
+}
+.button {
+    position: relative;
+    border: 1px solid #1FA9FF;
+    border-radius: 2px;
+    text-align: center;
+    color: #FFF;
+    background: #1FA9FF;
+}
+.msgBoxTitle .create.button {
+    width: 102px;
+}
+.msgBoxTitle .button {
+    position: absolute;
+    top: 18px;
+    right: 34px;
+    border-radius: 3px;
+    padding: 0 12px;
+    height: 28px;
+    font: 14px/28px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+}
+.create .icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    background-position: -21px 0;
+}
+.icon, .sideBar ul li span {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../../images/authorcenter/sprite.png);
+    background-repeat: no-repeat;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.worklist-table, .select-table {
+    text-align: center;
+}
+.worklist-table th, .select-table th {
+    border-bottom: 1px solid #E6E6E6;
+    height: 44px;
+    font: 14px/44px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    background: #F9F9F9;
+}
+.tl {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+.worklist-table tr.active, .select-table tr.active {
+    background: #F6FBFF;
+}
+.worklist-table td, .select-table td {
+    border-bottom: 1px solid #E6E6E6;
+    height: 48px;
+    padding: 5px 0;
+    font: 14px/1.5 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    color: #575757;
+}
+.worklist-table tr.active td, .select-table tr.active td {
+    height: auto;
+    padding: 10px 0 5px;
+}
+.worklist-table td .work-photo, .select-table td .work-photo {
+    display: none;
+    float: left;
+    margin-right: 10px;
+    padding: 4px 0;
+}
+.worklist-table tr.active .work-photo, .worklist-table tr.active .time, .worklist-table tr.active .qq-group, .select-table tr.active .work-photo, .select-table tr.active .time, .select-table tr.active .qq-group {
+    display: block;
+}
+
+.worklist-table tr.active .work-name, .select-table tr.active .work-name {
+    width: 130px;
+    height: 118px;
+}
+.worklist-table td.tl p, .select-table td.tl p {
+    padding-right: 20px;
+}
+.worklist-table td .work-name, .select-table td .work-name {
+    display: table-cell;
+    vertical-align: middle;
+}
+.worklist-table td a, .select-table td a {
+    word-break: break-all;
+    color: #575757;
+}
+.worklist-table td .work-photo img, .select-table td .work-photo img {
+    display: block;
+    border: 5px solid #FFF;
+}
+.worklist-table tr.active .work-name, .select-table tr.active .work-name {
+    width: 130px;
+    height: 118px;
+}
+.worklist-table td.tl p, .select-table td.tl p {
+    padding-right: 20px;
+}
+
+
+/*发布章节*/
+.crumbsWrap em {
+    float: left;
+    width: 35px;
+    height: 45px;
+    background-image: url(../../images/authorcenter/line.png);
+}
+.crumbsWrap em.diff {
+    background-position: -36px 0;
+}
+.crumbsWrap i.current {
+    padding-left: 0;
+    background: #F9F9F9;
+}
+.crumbsWrap i {
+    float: left;
+    vertical-align: middle;
+}
+.crumbsWrap span {
+    display: inline-block;
+    font: 14px/44px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    vertical-align: middle;
+    transition: color .3s;
+}
+.msgBoxTitle {
+    position: relative;
+    border-bottom: 1px solid #E6E6E6;
+    height: 23px;
+    padding: 31px 0 0 35px;
+}
+.msgBoxTitle .tabSwitch {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.tabSwitch {
+    border-bottom: 1px solid #E6E6E6;
+    height: 54px;
+}
+.tabSwitch span {
+    position: relative;
+    float: left;
+    padding: 16px 19px 0;
+    height: 36px;
+    font: 16px/36px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    cursor: pointer;
+    text-align: center;
+}
+.msgBoxTitle .tabSwitch span {
+    font-size: 16px;
+}
+.tabSwitch span.act {
+    border-bottom: 3px solid #50A8FF;
+    height: 36px;
+    line-height: 36px;
+    color: #4EA8FF;
+}
+/*左边*/
+.mLeftList {
+    border-right: 1px solid #E6E6E6;
+    width: 230px;
+    margin-bottom: -5000px;
+    padding-bottom: 5000px;
+}
+.mLeftList .titleBox {
+    height: 47px;
+    background: #F6F6F6;
+}
+.mLeftList .titleBox p {
+    padding-left: 9px;
+    font: 12px/56px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif";
+    color: #999;
+}
+.sectionManage {
+    position: relative;
+    border-top: 1px solid #E6E6E6;
+    height: 740px;
+    background: #FFF;
+}
+.slimScrollDiv {
+    z-index: 1;
+}
+.sectionList li.act {
+    border-bottom: 1px solid #D0E9FF;
+    background: #E1F2FF;
+}
+.sectionList li {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+.sectionList li.act .sectionBox {
+    border-bottom: none;
+}
+.sectionList .sectionBox {
+    padding: 10px 20px 3px 9px;
+}
+.sectionBox p {
+    overflow: hidden;
+    font: 14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    color: #333;
+}
+.sectionList li.act .sectionBox p {
+    color: #376590;
+}
+.sectionBox p em {
+    display: inline-block;
+    overflow: hidden;
+    width: 180px;
+    min-height: 25px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.sectionBox p.f12 {
+    font-size: 12px;
+    color: #999;
+}
+.sectionList li.act .sectionBox p.f12 {
+    color: #8BAECE;
+}
+.sectionBox p.f12 i {
+    float: right;
+}
+i, em, cite {
+    font-style: normal;
+}
+
+
+/*左边*/
+.sectionViewWrap {
+    position: relative;
+}
+.button {
+    position: relative;
+    border: 1px solid #1FA9FF;
+    border-radius: 2px;
+    text-align: center;
+    color: #FFF;
+    background: #1FA9FF;
+}
+.sectionBtnBox {
+    border-bottom: 1px solid #E6E6E6;
+    width: 761px;
+    height: 46px;
+    padding: 1px 24px 0 24px;
+    font-size: 12px;
+    background: #FAFAFA;
+}
+.button.white {
+    border: 1px solid #DDD;
+    color: #333;
+    background: #FFF;
+}
+.titleBtn {
+    padding: 8px 0 0;
+}
+.titleBtn .button.white {
+    color: #999;
+}
+.titleBtn .button {
+    height: 28px;
+    padding: 0 13px;
+}
+.titleBtn a {
+    float: left;
+    margin-right: 10px;
+    font: 14px/28px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+}
+.button.green {
+    border: 1px solid #48C268;
+    color: #FFF;
+    background: #48C268;
+}
+.icon, .sideBar ul li span {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../../images/authorcenter/sprite.png);
+    background-repeat: no-repeat;
+}
+
+.sectionBtnBox em {
+    float: left;
+    margin-right: 10px;
+    line-height: 46px;
+}
+.select-wrap.min {
+    width: 82px;
+}
+.select-wrap {
+    position: relative;
+    z-index: 50;
+    float: left;
+    margin: 8px 20px 0 0;
+}
+.drop-down {
+    position: relative;
+    height: 28px;
+    cursor: pointer;
+}
+.drop-down span {
+    display: block;
+    overflow: hidden;
+    padding: 0 20px 0 10px;
+    font: 12px/28px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif";
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.drop-list-box {
+    position: absolute;
+    top: 29px;
+    border: 1px solid #DDD;
+    cursor: pointer;
+    background: #FFF;
+}
+.combo-arrow {
+    float: none !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    margin: 0 !important;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    color: #999;
+    background: #FFF;
+    line-height: 1 !important;
+}
+.drop-list-box ul {
+    overflow-x: hidden;
+    max-height: 203px;
+}
+.min .drop-list-box li {
+    width: 80px;
+}
+/*写作区*/
+.sectionViewWrap .zwText {
+    padding: 10px 20px 0;
+    font: 16px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    word-break: break-all;
+    color: #575757;
+}
+input, button {
+    border: none;
+    outline: none;
+    font-family: "PingFangSC-Regular","HelveticaNeue-Light","Helvetica Neue Light","Microsoft YaHei","sans-serif";
+}
+textarea {
+    outline: none;
+    font: 14px/1.8 "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei","sans-serif";
+    resize: none;
+}
+.zwText input {
+    display: block;
+    border-bottom: 1px solid #E6E6E6;
+    width: 769px;
+    margin: 16px 0 10px;
+    padding: 0 0 6px 0;
+    height: 40px;
+    font: 18px/40px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    text-indent: 4px;
+}
+.zwText textarea {
+    overflow: hidden;
+    overflow-y: auto;
+    border: none;
+    width: 762px;
+    height: 540px;
+    padding: 0 4px;
+    word-break: break-all;
+    color: #575757;
+}
+
+/*作品设置*/
+.workStateWrap {
+    padding: 40px 0 0 40px;
+}
+.workStateWrap .fmBox {
+    border: 1px solid #E6E6E6;
+    width: 120px;
+    height: 158px;
+    margin: 8px 40px 0 0;
+}
+.fmBox .fm {
+    position: relative;
+    text-align: center;
+}
+.workStateWrap .fmBox img {
+    display: block;
+    width: 114px;
+    height: 152px;
+    margin: 3px 0 0 3px;
+}
+.workStateWrap .fmBox .fm span {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 120px;
+    height: 33px;
+    font: 14px/33px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    text-align: center;
+    color: #999;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    background: #FFF;
+    filter: alpha(opacity=90);
+    cursor: pointer;
+}
+.fmBox .fm a.blue {
+    display: block;
+    margin-top: 10px;
+    font: 12px/18px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+}
+
+.workSetList {
+    width: 640px;
+}
+.workSetList li {
+    min-height: 30px;
+}
+.workSetList li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 90px;
+    vertical-align: bottom;
+}
+.workSetList li em {
+    position: absolute;
+    left: 0;
+    width: 75px;
+    font: 14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    text-align: right;
+    color: #858585;
+}
+.workSetList li p.saved, .workSetList li p.modify {
+    float: left;
+    font: 14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+}
+.hidden {
+    display: none;
+}
+
+.workSetList li b {
+    display: inline-block;
+    width: 140px;
+    margin-right: 100px;
+    font: 14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+}
+
+
+.workSetList li cite {
+    font: 14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    color: #858585;
+}
+.workSetList li .select-level {
+    width: 200px;
+    margin-right: 0;
+}
+.workSetList li p {
+    font: 14px/30px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+}
+.workSetList .confirm, .workSetList .modify-btn {
+    padding: 10px 0 0 90px;
+}
+.dib-wrap a, .dib-wrap span {
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+.workSetList li {
+    min-height: 30px;
+}
+.workSetList .dib-wrap .button {
+    width: 178px;
+    height: 34px;
+    font: 14px/34px "PingFangSC-Regular", "HelveticaNeue-Light", "Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+    vertical-align: middle;
+}
+
+
+/**edit**/
+.mRightContent {
+    width: 809px;
+    padding-bottom: 5000px;
+    margin-bottom: -5000px;
+}
+.sectionBox {
+    border-bottom: 1px solid #E6E6E6;
+   /*  padding: 8px 20px 6px 9px; */
+}

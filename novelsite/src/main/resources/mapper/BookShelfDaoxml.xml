@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- 要按照 mybatis-3-mapper.dtd 来命名标签 -->
+
+<mapper namespace="com.leeue.novel.dao.BookShelfDao"> <!--namespace里面写是那个Dao -->
+
+	<!-- 增加书籍到书架 -->
+
+	<insert id="insertBookInBookShelf" useGeneratedKeys="true"
+		keyColumn="book_shelf_id" keyProperty="bookShelfId">
+		INSERT INTO
+		tb_book_shelf(book_shelf_id,book_id,site,link,title,type,reader_id,priority,book_name,author)
+		VALUES
+		(#{bookShelfId},#{bookId},#{site},#{link},#{title},#{type},#{readerId},#{priority},#{bookName},#{author})
+	</insert>
+
+	<!-- 查询该读者书架所有书籍 -->
+	<select id="queryBookShelfsByReaderId" resultType="com.leeue.novel.entity.BookShelf">
+		SELECT
+		book_shelf_id,book_id,site,link,title,type,reader_id,priority,book_name,author
+		FROM
+		tb_book_shelf
+		WHERE reader_id = #{readerId}
+		ORDER BY priority DESC
+	</select>
+
+	<!-- 分页查询书架里面的书籍 -->
+	<select id="queryBookShelfsByPage" resultType="com.leeue.novel.entity.BookShelf">
+		SELECT
+		book_shelf_id,book_id,site,link,title,type,reader_id,priority,book_name,author
+		FROM
+		tb_book_shelf
+		WHERE reader_id = #{readerId}
+		ORDER BY priority DESC
+		limit
+		#{start},#{end}
+	</select>
+	
+	<!-- 删除书架里的书籍-->
+	<delete id="deleteBookShelfById" parameterType="java.lang.Long">
+		DELETE FROM tb_book_shelf
+		where book_shelf_id = #{bookShelfId}
+	</delete>
+	
+	<!-- 查询书架数目 -->
+	<select id="queryAllBookByReaderId"  parameterType="java.lang.Long" resultType="int">
+		SELECT
+		COUNT(1)
+		FROM
+		tb_book_shelf
+		WHERE reader_id = #{readerId}
+		ORDER BY priority DESC
+	</select>
+	
+	<!--查询书架书籍通过 booid 和读者id  -->
+	<select id="queryBookShelfById" resultType="com.leeue.novel.entity.BookShelf">
+		SELECT
+		book_shelf_id,book_id,site,link,title,type,reader_id,priority,book_name,author
+		FROM
+		tb_book_shelf
+		WHERE reader_id = #{readerId} and book_id = #{bookId}
+		ORDER BY priority DESC
+	</select>
+	
+	<!-- 更新书架书籍 -->
+
+	<update id="updateBookShelfById" parameterType="com.leeue.novel.entity.BookShelf">
+		UPDATE tb_book_shelf
+		<set>
+			<if test="bookId !=null"> book_id=#{bookId},</if>
+			<if test="site !=null"> site=#{site},</if>
+			<if test="title != null">title=#{title},</if>
+			<if test="priority != null">priority=#{priority},</if>
+			<if test="bookName != null">book_name =#{bookName},</if>
+			<if test="author != null">author =#{author},</if>
+		</set>
+		WHERE reader_id = #{readerId} and book_id = #{bookId}
+	</update>
+	
+</mapper>

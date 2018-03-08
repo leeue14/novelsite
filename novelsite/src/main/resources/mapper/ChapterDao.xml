@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- 要按照 mybatis-3-mapper.dtd 来命名标签 -->
+<mapper namespace="com.leeue.novel.dao.ChapterDao"> <!--namespace里面写是那个Dao -->
+	<insert id="insertChapter" useGeneratedKeys="true" keyColumn="chapter_id"
+		keyProperty="chapterId">
+		INSERT INTO
+		tb_chapter(chapter_num,chapter_name,upload_time,book_id,body,world_count,is_vip,status)
+		VALUES(#{chapterNum},#{chapterName},#{uploadTime},#{bookId},#{body},#{worldCount},#{isVip},#{status})
+	</insert>
+
+	<!-- 删除 -->
+	<delete id="deleteChapter" parameterType="java.lang.Long">
+		DELETE FROM tb_chapter
+		where chapter_id = #{chapterId}
+	</delete>
+	<!-- 更新 -->
+	<update id="updateChapter" parameterType="com.leeue.novel.entity.Chapter">
+		UPDATE tb_chapter
+		<set>
+			<if test="chapterNum != null">chapter_num = #{chapterNum},</if>
+			<if test="chapterName != null"> chapter_name = #{chapterName},</if>
+			<if test="body != null"> body = #{body},</if>
+			<if test="worldCount != null"> world_count = #{worldCount},</if>
+			<if test="isVip != null"> is_vip = #{isVip},</if>
+			<if test="status != null"> status = #{status},</if>
+			<if test="status != null"> upload_time = #{uploadTime}</if>
+		</set>
+		where chapter_id = #{chapterId}
+	</update>
+
+	<!-- 查询 -->
+	<select id="findChapter" parameterType="java.lang.Long"
+		resultType="com.leeue.novel.entity.Chapter">
+		SELECT
+		chapter_id,chapter_num,chapter_name,upload_time,book_id,body,world_count,is_vip,status
+		FROM
+		tb_chapter
+		<where>
+			and chapter_id = #{chapterId}
+		</where>
+	</select>
+
+	<!-- 查询 所有章节 -->
+	<select id="findAllChapters" parameterType="java.lang.Long"
+		resultType="com.leeue.novel.entity.Chapter">
+		SELECT
+		chapter_id,chapter_num,chapter_name,upload_time,book_id,body,world_count,is_vip,status
+		FROM
+		tb_chapter
+		<where>
+			and book_id = #{bookId}
+			and status = #{status}
+		</where>
+		ORDER BY
+		chapter_num DESC
+	</select>
+
+	<!-- 查询所有的章节总数 -->
+	<select id="findAllChaptersCount" parameterType="int" resultType="int">
+		SELECT
+		max(chapter_num)
+		FROM
+		tb_chapter
+		<where>
+			and status = #{status}
+			and book_id = #{bookId}
+		</where>
+	</select>
+</mapper>

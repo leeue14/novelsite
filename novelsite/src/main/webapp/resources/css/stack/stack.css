@@ -1,0 +1,317 @@
+/*搜索页分类*/
+.rank_mainbox_sk ul li:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.rank_mainbox_sk {
+    display: block;
+}
+.rank_mainbox_sk {
+    border: 1px solid #ccc;
+}
+.rank_mainbox_sk .topbox {
+    height: 52px;
+    background: url(../../images/stack/chart.gif) 0 0 repeat-x;
+    margin-bottom: 13px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 14px;
+}
+.rank_mainbox_sk .topbox h1 {
+    line-height: 52px;
+    background: url(../../images/stack/point.gif) left center no-repeat;
+    margin-left: 15px;
+    padding-left: 15px;
+    float: left;
+}
+.rank_mainbox_sk .topbox span {
+    font: 12px/52px "microsoft yahei";
+    margin-left: 20px;
+}
+.rank_mainbox_sk span {
+    float: left;
+    padding-left: 5px;
+}
+/*分类列表*/
+.rank_mainbox_sk ul {
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 10px;
+}
+.rank_mainbox_sk .fenzhan {
+    margin-bottom: 8px;
+}
+.fenzhan select{
+    width: 100px;
+    height: 25px;
+    font-size: 15px;
+}
+.rank_mainbox_sk ul li {
+    display: block;
+}
+.rank_mainbox_sk li {
+    border-bottom: 1px dotted #ccc;
+    line-height: 29px;
+}
+.rank_mainbox_sk span {
+    float: left;
+    padding-left: 5px;
+}
+.rank_mainbox_sk a {
+    float: left;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: block;
+    font-weight: normal;
+    color: #333;
+}
+.fenzhan img.act {
+    border: 1px solid #900;
+}
+/*小说分类*/
+.rank_mainbox_sk .fenlei {
+    position: relative;
+    width: 950px;
+    height: 60px;
+    border-bottom: none;
+    z-index: 1;
+}
+.rank_mainbox_sk ul li {
+    display: block;
+}
+.rank_mainbox_sk .fenlei .top {
+    height: 29px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.rank_mainbox_sk span {
+    float: left;
+    padding-left: 5px;
+}
+/*被选中样式*/
+.rank_mainbox_sk a {
+    float: left;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: block;
+    font-weight: normal;
+    color: #333;
+}
+/*子分类*/
+.rank_mainbox_sk .fenlei .smallbox {
+    position: absolute;
+    border: 1px solid #ccc;
+    width: 912px;
+    height: 29px;
+    bottom: 0;
+    left: 0;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+/*主分类*/
+.rank_mainbox_sk .fenlei .top a.active {
+    height: 28px;
+    _line-height: 28px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+.rank_mainbox_sk a.active {
+    font-weight: bold;
+    color: #900;
+}
+
+/*书籍列表*/
+.allbooklist {
+    display: block;
+}
+.allbooklist {
+    margin-top: 10px;
+}
+.allbooklist .leftlist {
+    width: 1000px;
+    border: 1px solid #ccc;
+    float: left;
+}
+.allbooklist .topbox {
+    height: 36px;
+    background: url(../../images/stack/chart.gif) 0 0 repeat-x;
+    margin-bottom: 4px;
+    line-height: 36px;
+    border-bottom: 1px solid #ccc;
+}
+.allbooklist .leftlist .left {
+    float: left;
+    padding-left: 15px;
+    font-weight: bold;
+}
+.allbooklist .leftlist .right {
+    padding-right: 15px;
+}
+
+/*列表*/
+.allbooklist .book-list{
+    padding: 0 0 30px;
+}
+.books-list .book {
+    width: 410px;
+}
+.books-list .book {
+    position: relative;
+    float: left;
+    padding: 20px 15px;
+}
+.books-list, .books-verticale-list {
+    overflow: hidden;
+    width: 100%;
+}
+.books-list .book .right {
+    height: 120px;
+    margin-left: 105px;
+}
+.books-list .book .cover {
+    float: left;
+    width: 90px;
+    height: 120px;
+    border: 1px solid #ebebeb;
+    background: url(../../images/img-bk.png) no-repeat;
+    background-position: center;
+    background-size: 100%;
+    box-shadow: 2px 4px 6px #bbb;
+}
+.books-list .book .right p.author {
+    height: 28px;
+    line-height: 28px;
+}
+.books-list .book .right p {
+    height: 20px;
+    line-height: 20px;
+    color: #999;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+}
+.books-list .book .right p.desc {
+    height: 40px;
+    margin: 5px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.books-list .book .right p {
+    height: 20px;
+    line-height: 20px;
+    color: #999;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.books-list .book .right p.popularity {
+    margin-top: 10px;
+}
+.c-red {
+    color: #d82626;
+}
+
+/**/
+/*分页*/
+.c-full-page {
+    float: right;
+}
+.c-full-page {
+    clear: both;
+    display: inline-block;
+    margin: 15px 0;
+    color: #999;
+    font-size: 12px;
+}
+.c-full-page .total {
+    float: left;
+    margin-right: 15px;
+    line-height: 30px;
+}
+.c-gold {
+    color: #cab389;
+}
+.c-full-page .next, .c-full-page .prev {
+    float: left;
+    line-height: 30px;
+    color: #999;
+}
+.c-full-page .pageNumber {
+    float: left;
+    margin: 0 5px;
+}
+.c-full-page .jump {
+    float: left;
+    margin-left: 10px;
+}
+.c-full-page .pageNumber li.active {
+    background: #cab389;
+}
+.c-full-page .pageNumber li {
+    float: left;
+    min-width: 25px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.c-full-page .jump .page-input {
+    width: 35px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border: 1px solid #cab389;
+}
+.c-full-page .jump .page-go {
+    width: 35px;
+    height: 30px;
+    margin-left: 5px;
+    color: #fff;
+    border: 0 none;
+    background: #cab389;
+    cursor: pointer;
+}
+
+/*搜索结果页面*/
+.searchbb {
+    width: 760px;
+    height: 80px;
+    margin: 0 auto;
+    background-image: url(../../images/stack/searchbox.png);
+    position: relative;
+    background-position: 0 -43px;
+    background-repeat: no-repeat;
+
+}
+.sinput {
+    margin-left: 40px;
+    _margin-top: 5px;
+    border: 0;
+    width: 476px;
+    outline: none;
+    line-height: 34px;
+    height: 34px;
+    margin-top: 6px;
+    font-size: 14px;
+}
+.submit {
+    height: 43px;
+    width: 92px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+
+
+
+

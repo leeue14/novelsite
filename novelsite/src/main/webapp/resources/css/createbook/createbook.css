@@ -1,0 +1,82 @@
+.create_wrap {
+	width: 100%;
+}
+
+.create_content {
+	width: 60%;
+	height: 90%;
+	margin: 0 auto;
+}
+
+.create_content table td {
+	font-family: "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue",
+		Helvetica, tahoma, arial, Verdana, sans-serif, "WenQuanYi Micro Hei",
+		"\5B8B\4F53";
+	font-size: 17px;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
+	padding-bottom: 15px;
+}
+
+
+.create_content table input {
+	border: 1px solid #DDD;
+	width: 373px;
+	height: 36px;
+	padding-left: 5px;
+	font-family: "PingFangSC-Regular", "HelveticaNeue-Light",
+		"Helvetica Neue Light", "Microsoft YaHei", "sans-serif";
+	line-height: 26px;
+	vertical-align: middle;
+}
+
+.file {
+	position: relative;
+	display: inline-block;
+	background: #D0EEFF;
+	border: 1px solid #99D3F5;
+	border-radius: 4px;
+	padding: 4px 12px;
+	overflow: hidden;
+	color: #1E88C7;
+	text-decoration: none;
+	text-indent: 0;
+	line-height: 20px;
+}
+
+.file input {
+	position: absolute;
+	font-size: 100px;
+	right: 0;
+	top: 0;
+	opacity: 0;
+}
+
+.file:hover {
+	background: #AADFFD;
+	border-color: #78C3F3;
+	color: #004974;
+	text-decoration: none;
+}
+
+.layui-btn {
+	display: inline-block;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 18px;
+	background-color: #009688;
+	color: #fff;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 14px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.layui-btn-warm {
+    background-color: #FFB800;
+}
+.btn-group {
+	margin-top: 2%;
+	margin-left: 40%;
+}

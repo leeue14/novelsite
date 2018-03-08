@@ -1,0 +1,50 @@
+2018-02-28 21:47:16.220 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_id,admin_name,password,power,email) values (?,?,?,?,?)  
+2018-02-28 21:48:38.720 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 21:49:03.323 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 21:50:07.152 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 21:51:29.521 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 21:51:29.572 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==> Parameters: 许嵩(String), 123456789(String), 1(Integer), 1264307633@qq.com(String) 
+2018-02-28 21:52:17.131 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 21:52:17.164 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==> Parameters: 许嵩(String), 123456789(String), 1(Integer), 1264307633@qq.com(String) 
+2018-02-28 21:52:17.242 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- <==    Updates: 1 
+2018-02-28 21:53:42.558 [main] DEBUG com.leeue.novel.dao.AdminDao.findAdmin- ==>  Preparing: SELECT admin_id,admin_name,password,power,email FROM tb_admin WHERE email = ?  
+2018-02-28 21:53:42.596 [main] DEBUG com.leeue.novel.dao.AdminDao.findAdmin- ==> Parameters: 1264308633@qq.com(String) 
+2018-02-28 21:53:42.613 [main] DEBUG com.leeue.novel.dao.AdminDao.findAdmin- <==      Total: 1 
+2018-02-28 21:56:59.742 [main] DEBUG com.leeue.novel.dao.AdminDao.editAdminPower- ==>  Preparing: UPDATE tb_admin SET power= ? WHERE admin_id = ?  
+2018-02-28 21:57:36.729 [main] DEBUG com.leeue.novel.dao.AdminDao.editAdminPower- ==>  Preparing: UPDATE tb_admin SET power= ? WHERE admin_id = ?  
+2018-02-28 21:58:02.485 [main] DEBUG com.leeue.novel.dao.AdminDao.editAdminPower- ==>  Preparing: UPDATE tb_admin SET power= ? WHERE admin_id = ?  
+2018-02-28 21:58:02.513 [main] DEBUG com.leeue.novel.dao.AdminDao.editAdminPower- ==> Parameters: 2(Integer), 2(Long) 
+2018-02-28 21:58:02.592 [main] DEBUG com.leeue.novel.dao.AdminDao.editAdminPower- <==    Updates: 1 
+2018-02-28 21:58:29.211 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 21:58:29.259 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==> Parameters: 张梦琴(String), 123456789(String), 1(Integer), 1264307673@qq.com(String) 
+2018-02-28 21:58:29.306 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- <==    Updates: 1 
+2018-02-28 21:58:43.158 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 21:58:43.212 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==> Parameters: 张5琴(String), 123456789(String), 1(Integer), 1264307673@qq.com(String) 
+2018-02-28 21:58:43.262 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- <==    Updates: 1 
+2018-02-28 21:59:06.840 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 21:59:06.863 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==> Parameters: 张8琴(String), 123456789(String), 1(Integer), 1264307673@qq.com(String) 
+2018-02-28 21:59:06.926 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- <==    Updates: 1 
+2018-02-28 21:59:19.321 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 21:59:19.346 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==> Parameters: 张9琴(String), 123456789(String), 1(Integer), 1264306673@qq.com(String) 
+2018-02-28 21:59:19.440 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- <==    Updates: 1 
+2018-02-28 21:59:30.758 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 21:59:30.792 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==> Parameters: 张96琴(String), 123456789(String), 1(Integer), 1264306673@qq.com(String) 
+2018-02-28 21:59:30.855 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- <==    Updates: 1 
+2018-02-28 21:59:42.233 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 21:59:42.263 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==> Parameters: 996琴(String), 123456789(String), 1(Integer), 1964306673@qq.com(String) 
+2018-02-28 21:59:42.358 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- <==    Updates: 1 
+2018-02-28 21:59:57.465 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 21:59:57.511 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==> Parameters: 966琴(String), 123456789(String), 1(Integer), 1964386673@qq.com(String) 
+2018-02-28 21:59:57.558 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- <==    Updates: 1 
+2018-02-28 22:00:15.501 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 22:00:15.545 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==> Parameters: 966琴(String), 123456789(String), 1(Integer), 1944386673@qq.com(String) 
+2018-02-28 22:00:15.660 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- <==    Updates: 1 
+2018-02-28 22:00:27.151 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 22:00:27.191 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==> Parameters: 966琴(String), 123456789(String), 1(Integer), 1264578945@qq.com(String) 
+2018-02-28 22:00:27.264 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- <==    Updates: 1 
+2018-02-28 22:00:42.112 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==>  Preparing: INSERT INTO tb_admin(admin_name,password,power,email) values (?,?,?,?)  
+2018-02-28 22:00:42.142 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- ==> Parameters: 966琴(String), 123456789(String), 1(Integer), 1547894563@qq.com(String) 
+2018-02-28 22:00:42.173 [main] DEBUG com.leeue.novel.dao.AdminDao.insertAdmin- <==    Updates: 1 
+2018-02-28 23:37:16.533 [main] DEBUG com.leeue.novel.dao.ReaderDao.insertReader- ==>  Preparing: INSERT INTO tb_reader(nick_name,create_time,email,password,short_info) VALUES (?,?,?,?,?)  
+2018-02-28 23:37:16.559 [main] DEBUG com.leeue.novel.dao.ReaderDao.insertReader- ==> Parameters: 无聊1138000008(String), 2018年02月28日 23:37:16(String), 1264308640@foxmail.com(String), 15466878945(String), 我是一个好人啊(String) 
+2018-02-28 23:37:16.622 [main] DEBUG com.leeue.novel.dao.ReaderDao.insertReader- <==    Updates: 1 

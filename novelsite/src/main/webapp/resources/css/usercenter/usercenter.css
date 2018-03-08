@@ -1,0 +1,602 @@
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.top_nav2 {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.mainnav {
+    padding: 7px 0;
+    _padding: 15px 0;
+}
+
+a {
+    outline: none;
+    color: #333;
+    text-decoration: none;
+}
+
+.topline {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #ccc;
+    padding-bottom: 20px;
+}
+
+/*涓汉涓績LOGO寮�*/
+.cf {
+    zoom: 1;
+}
+
+.personal_logo {
+    margin-bottom: 5px;
+}
+
+.logo3 {
+    float: left;
+    text-indent: -9999px;
+    width: 131px;
+    height: 71px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background: url(../../images/usercenter/p_logo.jpg) no-repeat;
+}
+
+/*涓汉璧勬枡璇存槑*/
+.personal_wrap {
+    width: 1000px;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    overflow: hidden;
+    padding-bottom: 40px;
+    background: #fff;
+}
+
+/*宸﹁竟涓�爮*/
+.personal_left {
+    float: left;
+    width: 160px;
+    background: #F3F3F3;
+    padding-bottom: 2000px;
+    margin-bottom: -2000px;
+    border-left: 1px solid #eaeaea;
+}
+
+.personalbox {
+    z-index: 3;
+    width: 160px;
+    position: relative;
+}
+
+.personal_basic {
+    padding: 25px 0 20px;
+}
+
+.img_border_big {
+    width: 100px;
+    padding: 1px;
+    margin: 0 auto 5px;
+    border: 1px solid #ccc;
+}
+
+.img_border_big img {
+    display: block;
+}
+
+.infor_wrap {
+    text-align: center;
+    line-height: 1.8;
+}
+
+/*涓嬮潰瀵艰埅*/
+.personal_toolbar {
+    padding: 35px 0 0 0;
+}
+
+.personal_toolbar h1 {
+    text-indent: 20px;
+    font: 15px/32px "Microsoft Yahei";
+    text-align: center;
+    height: 32px;
+    position: relative;
+}
+
+.account_ico {
+    background: url(http://img1.chuangshi.qq.com/account/p1/ico/account.gif?v=1372916661) 22% no-repeat;
+}
+
+.writer_ico {
+    background: url(http://img1.chuangshi.qq.com/account/p1/ico/zuojia.gif?v=1372916661) 22% no-repeat;
+}
+
+.V_ico {
+    background: url(http://img1.chuangshi.qq.com/account/p1/ico/V.gif?v=1372916661) 22% no-repeat;
+}
+
+.my_shelf {
+    background: url(http://img1.chuangshi.qq.com/account/p1/ico/bookshelf.gif?v=1372916661) 22% no-repeat;
+}
+
+.shelf_list {
+    background: url(http://img1.chuangshi.qq.com/account/p1/ico/booklist.gif?v=1372916661) 22% no-repeat;
+}
+
+.my_shuping {
+    background: url(http://img1.chuangshi.qq.com/account/p1/ico/shuping.gif) 22% no-repeat;
+}
+
+#Sign_in {
+    border-top: 1px dotted #ccc;
+    padding: 20px 0 0 35px;
+    margin: 20px auto;
+}
+
+#Sign_in img {
+    display: block;
+    cursor: pointer;
+}
+
+/*涓棿鍐呭*/
+.personal_main {
+    float: left;
+    padding: 25px 0 0 30px;
+    _padding: 25px 0 0 25px;
+    background: #fff;
+    padding-bottom: 1000px;
+    margin-bottom: -1000px;
+    width: 599px;
+    _width: 550px;
+}
+
+.main_noright {
+    width: 780px;
+        min-height: 500px;
+    padding-bottom: 2000px;
+    margin-bottom: -2000px;
+}
+
+.main_h1tab {
+    position: relative;
+    height: 30px;
+    background: url(http://img1.chuangshi.qq.com/account/p1/eaeaea_bottom.png?v=1372916661) no-repeat left bottom;
+}
+
+.main_long_bottom {
+    width: 800px;
+    background: url(http://img1.chuangshi.qq.com/account/p1/eaeaea_bottom2.png?v=1372916661) no-repeat left bottom;
+}
+
+.main_h1tab {
+    position: relative;
+    height: 30px;
+    background: url(http://img1.chuangshi.qq.com/account/p1/eaeaea_bottom.png?v=1372916661) no-repeat left bottom;
+}
+
+.main_long_bottom {
+    width: 800px;
+    background: url(http://img1.chuangshi.qq.com/account/p1/eaeaea_bottom2.png?v=1372916661) no-repeat left bottom;
+}
+
+.main_h1tab h1 {
+    padding: 0 10px;
+    color: #666;
+    font: 15px/15px "Microsoft Yahei";
+}
+
+.main_h1tab span {
+    text-align: center;
+    float: left;
+    width: 110px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.main_current {
+    border-bottom: 2px solid #666;
+    font-weight: 700;
+}
+
+.main_h1tab b {
+    float: left;
+    font-weight: 400;
+    padding: 0 8px;
+}
+
+/*鐢ㄦ埛涓績 妯悜鑿滃崟*/
+.basic_info, .photo_manage, .CS_cdkey {
+    padding: 25px 0 0 40px;
+}
+
+.main_noright li {
+    position: relative;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+.main_noright li span {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+li a.red2 {
+    color: #900;
+}
+
+.basic_info a {
+    margin: 0 10px;
+}
+
+.basic_info ul li img {
+    margin-bottom: -3px;
+}
+
+li a.red2 {
+    color: #900;
+}
+
+.gray2 {
+    color: #999;
+}
+
+/*涓汉淇℃伅*/
+.personal_infodiv {
+    padding: 25px 0 0 40px;
+}
+
+.area_line {
+    text-indent: -9999px;
+    width: 300px;
+    height: 30px;
+}
+
+.longinput3 {
+    text-indent: 5px;
+    width: 500px;
+    height: 25px;
+    line-height: 25px;
+    _background: #fff;
+    _border: 1px solid #ccc;
+    background-position: 0 -1003px;
+    vertical-align: middle;
+}
+
+.midinput {
+    width: 204px;
+    height: 25px;
+    line-height: 25px;
+    _background: #fff;
+    _border: 1px solid #ccc;
+    background-position: -64px -336px;
+    text-indent: 5px;
+    vertical-align: middle;
+}
+
+#sex_man, #sex_woman {
+    vertical-align: middle;
+    margin: -2px 5px 1px 0;
+}
+
+.personal_infodiv label {
+    margin-right: 25px;
+    font-size: 14px;
+}
+
+.personal_infodiv ul li select {
+    margin-right: 10px;
+}
+
+.personal_infodiv ul li select {
+    margin-right: 10px;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+.personal_infodiv ul li select {
+    margin-right: 10px;
+}
+
+.p_savebtn {
+    padding-left: 85px;
+}
+
+.p_save {
+    float: left;
+    margin-right: 30px;
+}
+
+.savebtn {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    font: 16px/30px "Microsoft Yahei";
+    width: 96px;
+    height: 32px;
+    background-position: -578px -256px;
+}
+
+/*璐︽埛涓績*/
+h1.p_current {
+    background-color: #eaeaea;
+}
+.account_div {
+    padding: 20px 0 0 20px;
+}
+.member_state {
+    background: #FAFAFA;
+    width: 600px;
+    border: 1px solid #DBDBDB;
+    padding: 0 70px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+.member_state p {
+    _margin-top: 8px;
+    line-height: 40px;
+}
+.member_state span {
+    margin-right: 20px;
+}
+.open_member {
+    margin-left: 20px;
+}
+.account_balance {
+    margin-bottom: 30px;
+}
+.account_tab {
+    border-left: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
+    border-right: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+}
+colgroup {
+    display: table-column-group;
+}
+.account_tab td {
+    height: 35px;
+    border: 1px solid #eaeaea;
+}
+.account_tab th {
+    font-size: 14px;
+    height: 35px;
+}
+.account_tabright {
+    text-align: left;
+    text-indent: 15px;
+}
+.f900 {
+    color: #900;
+}
+.blue {
+    color: #0074B5;
+}
+
+/*鍏呭�寮圭獥*/
+.midas_minipay_dialog_mask {
+    position: fixed;
+    _position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4000;
+    background-color: #000;
+    -moz-opacity: 0.3;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+.midas_minipay_dialog_wrap_no_border {
+    position: absolute;
+    background-color: #fff;
+    font-size: 12px;
+    font-family: "Microsoft Yahei",Tohama;
+    -o-transition: left .6s ease-out,top .6s ease-out,width .6s ease-out;
+    -ms-transition: left .6s ease-out,top .6s ease-out,width .6s ease-out;
+    -moz-transition: left .6s ease-out,top .6s ease-out,width .6s ease-out;
+    -webkit-transition: left .6s ease-out,top .6s ease-out,width .6s ease-out;
+    transition: left .6s ease-out,top .6s ease-out,width .6s ease-out;
+}
+.midas_minipay_dialog_wrap_no_border .midas_minipay_dialog_header {
+    margin: 0;
+}
+.midas_minipay_dialog_header {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 39px;
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid #d8d8d8;
+    background: #fafafa;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa',endColorstr='#ededed',GradientType=0);
+    background: -o-linear-gradient(top,#fafafa 0%,#ededed 100%);
+    background: -moz-linear-gradient(top,#fafafa 0%,#ededed 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#fafafa),color-stop(100%,#ededed));
+    background: -webkit-linear-gradient(top,#fafafa 0%,#ededed 100%);
+    background: linear-gradient(top,#fafafa 0%,#ededed 100%);
+}
+.midas_minipay_dialog_header .header-icon-first {
+    left: 20px;
+}
+.midas_minipay_dialog_header .header-icon-first, .midas_minipay_dialog_header .header-icon-last {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin-top: -10px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+.midas_minipay_dialog_icon_clear {
+    background-image: url(//midas.gtimg.cn/midas/minipay_v2/images/headerSprites.02b55a0鈥�png);
+    background-position: 0px 1px;
+    width: 10px;
+    height: 10px;
+}
+.midas_minipay_dialog_icon_back {
+    background-image: url(//midas.gtimg.cn/midas/minipay_v2/images/headerSprites.02b55a0鈥�png);
+    background-position: 0px -14px;
+    width: 7px;
+    height: 11px;
+}
+.midas_minipay_dialog_header .cp-header-title {
+    line-height: 39px;
+    font-size: 16px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+    padding-left: 10px;
+    font-weight: normal;
+}
+.midas_minipay_dialog_header .header-icon-last {
+    right: 11px;
+}
+.midas_minipay_dialog_icon {
+    display: inline-block;
+    font-size: 0;
+    background-repeat: no-repeat;
+}
+
+.midas_minipay_dialog_content {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #5f5f5f;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+/*鍏呭�璁板綍*/
+.pay_div, .expense_div, .month_ticket_div, .recommed_div, .reward_div, .reward_remark_div {
+    padding: 15px 0 0 20px;
+}
+.pay_div select, .expense_div select, .month_ticket_div select, .recommed_div select, .reward_div select, .reward_remark_div select {
+    float: right;
+    margin-right: 50px;
+}
+.gold_div {
+    width: 752px;
+    margin: 20px 0 0;
+    border-bottom: 2px solid #ccc;
+}
+.pay_gold {
+    text-align: center;
+    width: 100px;
+    height: 27px;
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+    border-bottom: none;
+    background: url(http://img1.chuangshi.qq.com/account/p1/tab_normal100.png?v=1372916661) no-repeat;
+}
+.paycur {
+    font-weight: 700;
+    background: url(http://img1.chuangshi.qq.com/account/p1/tab_normal_cur100.png?v=1372916661) no-repeat;
+}
+.expense_tab, .pay_table {
+    width: 750px;
+    margin: 10px 0 20px -10px;
+    border: 1px solid #eaeaea;
+}
+.pay_tab {
+    text-align: center;
+    font-size: 12px;
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    clear: both;
+}
+.pay_tab thead th {
+    color: #666;
+    height: 22px;
+    line-height: 22px;
+    border: none;
+}
+.pay_tab tbody td {
+    color: #666;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+.main_long_bottom i {
+    position: absolute;
+    top: -5px;
+    right: 130px;
+}
+.my_bookshelf, .friend_shelf {
+    padding: 15px 0 0 20px;
+    width: 750px;
+}
+.shelf_tab th {
+    color: #666;
+}
+.shelf_tab input {
+    vertical-align: middle;
+    margin: -2px 0 1px 0;
+}
+
+.gray {
+    color: #666;
+}
+.shelf_tab a, .shelf_tab span {
+    vertical-align: middle;
+}
+.shelf_tab .gray2 {
+    margin-left: 5px;
+}
+.gray2 {
+    color: #999;
+}
+.shelf_tab span.org {
+    color: #F90;
+    font: 700 italic 14px/1.8 Comic Sans MS;
+}
+
+.ctrlright {
+    margin-top: 40px;
+}
+
+.page_left {
+    margin-top: -3px;
+    padding-left: 9px;
+}
+.page_left {
+    float: left;
+    margin-bottom: 20px;
+}
+#msgall {
+    margin: -2px 5px 1px 0;
+}
+.page_left label {
+    margin-right: 20px;
+}
+.pagectrl {
+    width: 770px;
+    padding-top: 20px;
+    border-top: 1px dotted #ccc;
+}
+.friend_shelf {
+    position: relative;
+}
+.my_bookshelf, .friend_shelf {
+    padding: 15px 0 0 20px;
+    width: 750px;
+}
+.shelf_tab {
+/* 	min-height: 190px; */
+    text-align: center;
+    margin-top: 10px;
+}

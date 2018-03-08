@@ -1,0 +1,13 @@
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    height: 150px;
+     border-top: 1px dotted #ccc; 
+    padding-top: 15px;
+    width: 1000px;
+    margin: 0 auto;
+}
+.foot_nav span {
+    color: #999;
+    margin: 0 5px;
+}

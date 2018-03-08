@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- 要按照 mybatis-3-mapper.dtd 来命名标签 -->
+
+
+<mapper namespace="com.leeue.novel.dao.ReaderDao"> <!--namespace里面写是那个Dao -->
+	<insert id="insertReader" useGeneratedKeys="true" keyColumn="reader_id"
+		keyProperty="readerId">
+		INSERT INTO
+		tb_reader(nick_name,create_time,email,password,short_info)
+		VALUES
+		(#{nickName},#{createTime},#{email},#{password},#{shortInfo})
+	</insert>
+
+	<!-- 读者信息的更新 -->
+	<update id="updateReader" parameterType="com.leeue.novel.entity.Reader">
+		UPDATE tb_reader
+		<set>
+			<if test="nickName !=null"> nick_name=#{nickName},</if>
+			<if test="email !=null"> email=#{nickName},</if>
+			<if test="password != null">password=#{password},</if>
+			<if test="sex != null">sex =#{sex},</if>
+			<if test="shortInfo != null"> short_info=#{shortInfo},</if>
+			<if test="recommendTicket != null"> recommend_ticket=#{recommendTicket},</if>
+			<if test="lastLoginTime != null"> last_login_time = #{lastLoginTime},</if>
+			<if test="grade != null"> grade=#{grade},</if>
+			<if test="fansCount !=null"> fans_count=#{fansCount},</if>
+			<if test="point != null"> point=#{point},</if>
+			<if test="status != null"> status=#{status},</if>
+		</set>
+		where reader_id = #{readerId}
+	</update>
+
+	<!-- 读者信息的查询 -->
+	<select id="queryReader" parameterType="java.lang.String"
+		resultType="com.leeue.novel.entity.Reader">
+		SELECT
+		reader_id,
+		nick_name,
+		create_time,
+		email,
+		password,
+		sex,
+		short_info,
+		recommend_ticket,
+		last_login_time,
+		grade,
+		fans_count,
+		point,
+		status
+		FROM
+		tb_reader
+		<where>
+			AND email = #{emailAndPhone}
+		</where>
+	</select>
+
+
+	<!-- 查找所有读者 -->
+	<select id="queryAllReader" resultType="com.leeue.novel.entity.Reader">
+		SELECT
+		reader_id,
+		nick_name,
+		create_time,
+		email,
+		password,
+		sex,
+		short_info,
+		recommend_ticket,
+		last_login_time,
+		grade,
+		fans_count,
+		point,
+		status
+		FROM
+		tb_reader
+
+	</select>
+</mapper>

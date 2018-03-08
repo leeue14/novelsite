@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>顶部模版</title>
+    <link rel="stylesheet" href="../../resources/css/index/H-ui.reset.css">
+    <link rel="stylesheet" href="../../resources/css/index/base.css">
+    <link rel="stylesheet" href="../../resources/css/usercenter/usercenter.css">
+    <link rel="stylesheet" href="../../resources/css/top/top.css">
+</head>
+<body>
+<div id="topNav" class="top_nav" style="background-color:#575757;">
+    <div class="top_nav_center cf">
+        <div class="toolbar">
+            <a attr="inner:toggleSiteListBtn;" class="qqSite" href="#" target="_blank">腾讯文学</a>
+            <span class="navline">|</span><a attr="click:addFavorite;" class="favorite" href="javascript:">一键收藏</a>
+            <div attr="inner:siteListDropdown;" class="navDownLoad">
+                <a class="downStar" href="#" onclick="" target="_blank">腾讯网首页</a>
+                <a class="downIos" href="#" target="_blank">iOS下载</a>
+                <a class="downAn" href="#" target="_blank">安卓端下载</a>
+            </div>
+        </div>
+        <div class="loginbar">
+            <span class="login_after">
+            <a class="login user" href="#"> 欢迎您，<i>书友1339208162</i></a>
+            <a class="exit" attr="click:ywlogout;" href="#">退出</a>
+            <span class="navline">|</span>
+            </span>
+            <a id="myreader" class="myreader" href="#">我的书架</a>
+            <a id="user_center" class="user_center" href="#">个人中心</a>
+            <a class="pay" href="/usermoney/index.html">充值</a>
+            <span class="navline">|</span>
+            <a id="more_nav" class="more_nav" href="javascript:">导航</a>
+            <!-- 书架下拉菜单 -->
+            <div id="bookrack" attr="inner:bookshelfDropdown;" class="bookrack" style="display: none">
+                <p><span class="ccc">藏书：</span><span>4</span>本 </p>
+                <div class="nav_hover_list cf">
+                    <a href="#">最近阅读</a>
+                    <span class="booktags"></span>
+                </div>
+            </div><!-- 用户中心下拉菜单  -->
+            <div id="user_menu" class="user_menu">
+                <div class="nav_hover_list cf">
+                    <a href="#">我的书架</a>
+                    <a href="#">账户设置</a>
+                    <a class="a_nobg" href="#">账务中心</a>
+                    <a class="a_nobg" target="_blank" href="#">作家专区</a>
+                </div>
+            </div><!-- 导航下拉菜单 -->
+            <div id="more_box" class="more_box">
+                <div class="nav_hover_list cf">
+                    <a href="#" title="玄幻·奇幻">玄幻·奇幻</a>
+                    <a href="#" title="武侠·仙侠">武侠·仙侠</a>
+                    <a href="#" title="都市·职场">都市·职场</a>
+                    <a href="#" title="历史·军事">历史·军事</a>
+                    <a href="#" title="游戏·竞技">游戏·竞技</a>
+                    <a href="#" title="科技·灵异">科技·灵异</a>
+                    <a href="#" style="width:37px;" title="同人">同人</a>
+                    <a style="width:1px; margin-left:-6px;">·</a>
+                    <a href="#" style="width:37px;" title="短篇">短篇</a>
+                    <a href="#" title="女生·言情">女生·言情</a>
+                    <a href="http://chuangshi.qq.com" style="width:37px;" title="首页">首页</a>
+                    <a style="width:1px; margin-left:-6px;">·</a>
+                    <a href="http://chuangshi.qq.com/bk/" title="书库" style="width:37px;">书库</a>
+                </div>
+            </div>
+            <div id="pointy_msg"></div>
+        </div>
+    </div>
+</div>
+<div class="wrap">
+    <div class="top_nav2">
+        <div class="mainnav">&nbsp;
+            <a href="#" title="创世首页">创世首页</a>&nbsp;
+            <a class="red dotted" href="#" title="榜单">榜单</a>&nbsp;
+            <a href="#" title="玄幻">玄幻</a>&nbsp;
+            <a href="#" title="仙侠">仙侠</a>&nbsp;
+            <a class="red dotted" href="#" title="都市">都市</a>&nbsp;
+            <a href="#" title="灵异">灵异</a>&nbsp;
+            <a href="#" title="游戏">游戏</a>&nbsp;
+            <a href="#" title="历史">历史</a>&nbsp;
+            <a class="dotted" href="#" title="云起首页">云起首页</a>&nbsp;
+            <a href="#" title="榜单">云起榜单</a>&nbsp;
+            <a href="#" title="古代言情">古代言情</a>&nbsp;
+            <a href="#" title="现代言情">现代言情</a>&nbsp;
+            <a href="#" title="玄幻言情">玄幻言情</a>&nbsp;
+            <a class="dotted" href="#" title="畅销图书">畅销图书</a>&nbsp;
+            <a class="red dotted" target="_blank" href="#"
+               title="作家福利">作家福利</a>&nbsp;
+            <a target="_blank" href="#" title="作家专区">作家专区</a>&nbsp;
+            <a class="red dotted" href="#" title="论坛" target="_blank">论坛</a>&nbsp;
+            <a href="#" title="帮助">帮助</a>
+        </div>
+        <div class="topline"></div>
+    </div>
+</div>
+
+<script src="../../resources/lib/jquery/1.9.1/jquery.js"></script>
+<script src="../../resources/js/top/top.js"></script>
+</body>
+</html>

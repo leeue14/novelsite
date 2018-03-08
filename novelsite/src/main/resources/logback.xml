@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- logbak配置 scan="true" 如果.xml文件修改了会重新扫描这个xml文件 scanPeriod="" 设置多少时间自动扫描一次配置文件 -->
+
+
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+	<!-- 定义参数常量 -->
+	<!-- 日志级别 TRACE<DEBUG<INFO<WARN<ERROR -->
+	<!-- 日志输出logger.trace("msg") logger.debug()... -->
+	<property name="log.level" value="debug">
+	</property>  <!-- 设置日志级别 -->
+	<property name="log.maxHistory" value="30"></property>
+
+	<!--日志存储根路径 ${catalina.base} 存储的是tomcat实例根目录 -->
+	<property name="log.filePath" value="${catalina.base}/logs/webapps"></property>
+	<property name="log.pattern"
+		value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{55}- %msg %n"></property>
+	<!--%d 表示时间格式 [%thead] 表示是哪个线程执行的 %-5level是什么级别 %logger{55}- %msg 表示那个类里面的输出的相关日志信息 -->
+
+	<!-- 控制台设置 -->
+	<appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${log.pattern}</pattern>
+		</encoder>
+	</appender><!-- 将文件输出到文件里，并负责将字节数组转换成字符串，这个也会在控制台输出 -->
+	<!--DEBUG设置 -->
+	<appender name="debugAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!--文件保存路径 -->
+		<file>${log.filePath}/debug.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- 文件名称 -->
+			<fileNamePattern>
+				${log.filePath}/debug/debug.%d{yyyy-MM-dd}.log.gz
+			</fileNamePattern><!-- 将前一天的日志打包存储 -->
+			<!-- 最大保存时间 是30天 上面有设置 -->
+			<maxHistory>${log.maxHistory}</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${log.pattern}</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>DEBUG</level><!-- 只保留DEBUG信息，其他过滤掉 -->
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+
+	</appender><!-- 随着时间会增加日志信息 -->
+
+
+	<!--INFO设置 -->
+	<appender name="infoAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!--文件保存路径 -->
+		<file>${log.filePath}/info.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- 文件名称 -->
+			<fileNamePattern>
+				${log.filePath}/info/info.%d{yyyy-MM-dd}.log.gz
+			</fileNamePattern>
+			<!-- 最大保存时间 是30天 上面有设置 -->
+			<maxHistory>${log.maxHistory}</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${log.pattern}</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+
+	</appender><!-- 随着时间会增加日志信息 -->
+
+
+	<!--ERROR设置 -->
+	<appender name="errorAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!--文件保存路径 -->
+		<file>${log.filePath}/error.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- 文件名称 -->
+			<fileNamePattern>
+				${log.filePath}/error/error.%d{yyyy-MM-dd}.log.gz
+			</fileNamePattern>
+			<!-- 最大保存时间 是30天 上面有设置 -->
+			<maxHistory>${log.maxHistory}</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>${log.pattern}</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+
+	</appender><!-- 随着时间会增加日志信息 -->
+
+	<!--additivity=true:会继承root根的配置，也会在控制台上输出,logger一个类对应类一个log，会扫描所有com.leeue.o2o下面的包 -->
+
+	<logger name="com.leeue.novel" level="${log.level}" additivity="true">
+		<appender-ref ref="debugAppender" />
+		<appender-ref ref="infoAppender" />
+		<appender-ref ref="errorAppender" />
+	</logger>
+
+	<root level="info">
+		<appender-ref ref="consoleAppender" /><!--控制台信息  -->
+	</root>
+</configuration>

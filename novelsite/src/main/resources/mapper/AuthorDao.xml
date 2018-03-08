@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> <!-- 要按照 mybatis-3-mapper.dtd 来命名标签 -->
+
+
+<mapper namespace="com.leeue.novel.dao.AuthorDao"> <!--namespace里面写是那个Dao -->
+<!-- 作者信息的增加 -->
+	<insert id="insertAuthor" useGeneratedKeys="true" keyColumn="author_id"
+		keyProperty="authorId">
+		INSERT INTO
+		tb_author(reader_id,pen_name,real_name,home_addr,phone,id_card,qq_num,short_info,create_time,email)
+		VALUES
+		(#{readerId},#{penName},#{realName},#{homeAddr},#{phone},#{idCard},#{qqNum},#{shortInfo},#{createTime},#{email})
+	</insert>
+
+	<!-- 作者信息的更新-->
+	<update id="updateAuthor" parameterType="com.leeue.novel.entity.Author">
+		UPDATE tb_author
+		<set>
+			<if test="homeAddr !=null"> home_addr=#{homeAddr},</if>
+			<if test="phone !=null"> phone=#{phone},</if>
+			<if test="qqNum != null">qq_num=#{qqNum},</if>
+			<if test="email != null">email=#{email},</if>
+			<if test="shortInfo != null">short_info =#{shortInfo},</if>
+		</set>
+		where reader_id = #{readerId}
+	</update>
+	
+	<!-- 作者信息的查询 -->
+	<select id="queryAuthor" parameterType="int" resultType="com.leeue.novel.entity.Author">
+		SELECT
+		author_id,
+		reader_id,
+		pen_name,
+		real_name,
+		home_addr,
+		phone,
+		id_card,
+		qq_num,
+		short_info,
+		create_time,
+		email
+		FROM
+		tb_author
+		<where>
+			reader_id = #{readerId}
+		</where>
+	</select>
+	
+	<!-- 根据笔名查询 -->
+	<select id="queryAuthorPenName" parameterType="java.lang.String" resultType="com.leeue.novel.entity.Author">
+		SELECT
+		author_id,
+		reader_id,
+		pen_name,
+		real_name,
+		home_addr,
+		phone,
+		id_card,
+		qq_num,
+		short_info,
+		create_time,
+		email
+		FROM
+		tb_author
+		<where>
+			pen_name = #{penName}
+		</where>
+	</select>
+	
+	<!-- 根据笔名查询 -->
+	<select id="queryAuthorIdCard" parameterType="java.lang.String" resultType="com.leeue.novel.entity.Author">
+		SELECT
+		author_id,
+		reader_id,
+		pen_name,
+		real_name,
+		home_addr,
+		phone,
+		id_card,
+		qq_num,
+		short_info,
+		create_time,
+		email
+		FROM
+		tb_author
+		<where>
+			id_card = #{idCard}
+		</where>
+	</select>
+</mapper>

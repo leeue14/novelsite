@@ -1,0 +1,22 @@
+https://github.com/xiadd/zhuishushenqi
+
+http://novel.juhe.im/
+
+https://github.com/ly321/Reading  重要
+
+bookCover：
+http://statics.zhuishushenqi.com/agent/http%3A%2F%2Fimg.1391.com%2Fapi%2Fv1%2Fbookcenter%2Fcover%2F1%2F41584%2F_41584_123902.jpg%2F
+
+
+获取书籍章节
+http://novel.juhe.im/book-chapters/56f8da09176d03ac1983f6cd
+params:
+{
+  id: {书籍源id}
+}
+
+获取书籍源
+http://novel.juhe.im/book-sources?view=summary&book=567d2cb9ee0e56bc713cb2c0  bookid
+
+搜索
+http://novel.juhe.im/search?keyword=圣墟

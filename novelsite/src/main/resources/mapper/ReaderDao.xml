@@ -77,4 +77,26 @@
 		tb_reader
 
 	</select>
+
+	<!-- 分页查找 -->
+	<select id="queryReaderByPage" resultType="com.leeue.novel.entity.Reader">
+		SELECT
+		reader_id,
+		nick_name,
+		create_time,
+		email,
+		password,
+		sex,
+		short_info,
+		recommend_ticket,
+		last_login_time,
+		grade,
+		fans_count,
+		point,
+		status
+		FROM
+		tb_reader
+		limit
+		#{start},#{end}
+	</select>
 </mapper>

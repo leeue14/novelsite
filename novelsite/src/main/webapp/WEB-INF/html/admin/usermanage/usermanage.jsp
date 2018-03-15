@@ -76,8 +76,27 @@
 	href="resources/admin/lib/layer-v3.0.3/layer/skin/default/layer.css" />
 <script type="text/javascript"
 	src="resources/admin/lib/jquery/1.9.1/jquery.min.js"></script>
-
+<link rel="stylesheet" href="resources/css/page/page.css">
 <!-- <link rel="stylesheet" href="resources/css/index/H-ui.reset.css"> -->
+
+<style>
+.tdhidden {
+	overflow: hidden;
+	width: 200px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+a:hover{
+	text-decoration:none;
+}
+a:hover, .active a {
+    color: #333;
+}
+.tda{
+	color:#333;
+}
+</style>
 </head>
 
 <body>
@@ -122,29 +141,25 @@
 												<th>注册时间</th>
 												<th>绑定email</th>
 												<th>个人简介</th>
-												<th>账户状态</th>
-												<th colspan="2">操作</th>
+												<!-- <th>账户状态</th> -->
+												<th colspan="">操作</th>
 											</tr>
-										</thead>${model.readers}
+										</thead>
 										<tbody id="tbody">
-											<c:forEach var="item" items="${requestScope.readers}"
+											<c:forEach var="item" items="${requestScope.readerPageBean.list}"
 												varStatus="status">
 												<tr class="active">
-													<td>${item.nickName }</td>
-													<td>${item.createTime }</td>
-													<td>${item.email}</td>
+													<td class="tdhidden " ><a class="tda" title="${item.nickName }">${item.nickName }</a></td>
+													<td class="tdhidden"><a class="tda" title="${item.createTime }">${item.createTime }</a></td>
+													<td class="tdhidden"><a class="tda" title="${item.email}">${item.email}</a></td>
 													<td
-														style="width: 70px; overflow:hidden;text-overflow:ellipsis; white-space: nowrap;">
-														${item.shortInfo}</td>
-													<td>
-														${item.status}
-														</td>
+														style="overflow:hidden;width:200px;white-space:nowrap;text-overflow:ellipsis;">
+														<a class="tda" title="${item.shortInfo}">${item.shortInfo}</a></td>
+													<%-- <td class="tdhidden"><a class="tda">${item.status}</a></td> --%>
 
-													<td colspan="2">
-													<input class="btn btn-primary radius"
-														type="button" value="禁用">
-													<input class="btn btn-danger radius" type="button"
-														value="删除"> 
+													<td colspan="" ><!-- <input class="btn btn-primary radius"
+														type="button" value="禁用"> --> <input
+														class="btn btn-danger radius" type="button" value="删除">
 													</td>
 												</tr>
 
@@ -169,10 +184,62 @@
 							</tr>
 						</tbody>
 					</table>
+					
+					<div class="c-full-page">
+				<span class="total">共<span class="c-gold">${requestScope.readerPageBean.totalPage}</span>页
+
+				</span>
+				<c:if test="${requestScope.readerPageBean.pageNum >1 }">
+					<a
+						href="/novelsite/usermanage/usermanageindex?pageNum=${requestScope.readerPageBean.pageNum-1}&bookName=${requestScope.bookName}"
+						class="prev">上一页</a>
+				</c:if>
+				
+				<c:forEach var="i" step="1"
+					begin="${requestScope.readerPageBean.start}"
+					end="${requestScope.readerPageBean.end}">
+					<ul class="pageNumber">
+						<c:if test="${requestScope.readerPageBean.pageNum == i}">
+							<li class="active"><a
+								href="/novelsite/usermanage/usermanageindex?pageNum=${i}&bookName=${requestScope.bookName}">${i}</a></li>
+						</c:if>
+						<c:if test="${requestScope.readerPageBean.pageNum != i}">
+							<li class=""><a
+								href="/novelsite/usermanage/usermanageindex?pageNum=${i}&bookName=${requestScope.bookName}">${i}</a></li>
+						</c:if>
+
+					</ul>
+				</c:forEach>
+				<c:if
+					test="${requestScope.readerPageBean.pageNum < requestScope.readerPageBean.totalPage}">
+					<a
+						href="/novelsite/usermanage/usermanageindex?pageNum=${requestScope.readerPageBean.pageNum+1}"
+						class="next">下一页</a>
+				</c:if>
+				<%-- <div class="jump">
+					<span>跳转到</span> <input id="page-input" class="page-input"
+						type="text" name="pageNumber" value="">
+					<button id="page-go" class="page-go" type="button"
+					data-link="${requestScope.pageLink}"
+					data-name="${requestScope.bookName }"
+						data-total="${requestScope.readerPageBean.totalPage}">GO</button>
+				</div> --%>
+			</div>
+		
 				</div>
 			</div>
+		
+		
+		
+		
 		</div>
+	
+	
+	
 	</div>
+
+
+
 	<!--引用的js代码-->
 	<script type="text/javascript"
 		src="resources/admin/lib/jquery/1.9.1/jquery.min.js"></script>
@@ -188,26 +255,26 @@
 
 
 	<script>
-	/* 	$(function() {
-			$.ajax({
-				url : "/novelsite/readeroperation/findalluser",
-				type : "POST",
-				contentType : false,
-				processData : false,
-				cache : false,
-				success : function(data) {
-					if (data.success) {
-						var htmlStr = "";
-						var readers = data.readers;
-						for (var i = 0; i < readers.length; i++) {
-							html += "<tr class='active'><td>"
-									+ readers[i].nickName + "</td>";
+		/* 	$(function() {
+				$.ajax({
+					url : "/novelsite/readeroperation/findalluser",
+					type : "POST",
+					contentType : false,
+					processData : false,
+					cache : false,
+					success : function(data) {
+						if (data.success) {
+							var htmlStr = "";
+							var readers = data.readers;
+							for (var i = 0; i < readers.length; i++) {
+								html += "<tr class='active'><td>"
+										+ readers[i].nickName + "</td>";
+							}
+							$("tbody").html(htmlStr);
 						}
-						$("tbody").html(htmlStr);
 					}
-				}
-			});
-		}); */
+				});
+			}); */
 	</script>
 </body>
 </html>

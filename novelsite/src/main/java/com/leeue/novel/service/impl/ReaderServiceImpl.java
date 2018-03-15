@@ -2,6 +2,7 @@ package com.leeue.novel.service.impl;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,6 +35,12 @@ public class ReaderServiceImpl implements ReaderService {
 	public List<Reader> queryAllReader() {
 	
 		return readerDao.queryAllReader();
+	}
+
+	@Override
+	public List<Reader> queryReaderByPage(int start, int end ,@Param("reader") Reader reader) {
+		
+		return readerDao.queryReaderByPage(start, end,reader);
 	}
 
 }

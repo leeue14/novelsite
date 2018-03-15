@@ -47,4 +47,9 @@ public interface ReaderDao {
 	 */
 	List<Reader> queryAllReader();
 	
+	/**
+	 * 分页查找
+	 */
+	List<Reader> queryReaderByPage(@Param("start") int start, @Param("end") int end,@Param("reader") Reader reader);
+	
 }

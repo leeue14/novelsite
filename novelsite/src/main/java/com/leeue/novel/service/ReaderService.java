@@ -34,4 +34,6 @@ public interface ReaderService {
 	
 	
 	List<Reader> queryAllReader();
+	
+	List<Reader> queryReaderByPage(@Param("start") int start, @Param("end") int end, @Param("reader") Reader reader);
 }

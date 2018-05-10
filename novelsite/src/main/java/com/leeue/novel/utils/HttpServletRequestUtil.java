@@ -18,6 +18,9 @@ public class HttpServletRequestUtil {
 	 * @return
 	 */
 	public static int getInt(HttpServletRequest request, String key) {
+		if(request.getParameter(key) == null){
+			return -1;
+		}
 		try {
 			return Integer.decode(request.getParameter(key));
 		} catch (Exception e) {

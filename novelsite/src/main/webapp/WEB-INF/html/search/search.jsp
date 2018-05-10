@@ -32,7 +32,7 @@
 	<!--书库-->
 	<div class="wrap clearfix" >
 		<div class="searchbb">
-			<input id="searchTop_input" type="text"
+			<input id="searchTop_input" type="text" value="${requestScope.bookName }"
 				class="sinput shoushubox gray" maxlength="70" placeholder="输入小说名"
 				style="color:Gray;" autocomplete="off">
 			<div class="submit">

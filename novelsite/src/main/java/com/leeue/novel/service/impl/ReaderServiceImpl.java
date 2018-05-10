@@ -32,15 +32,21 @@ public class ReaderServiceImpl implements ReaderService {
 	}
 
 	@Override
-	public List<Reader> queryAllReader() {
+	public List<Reader> queryAllReader(Reader reader) {
 	
-		return readerDao.queryAllReader();
+		return readerDao.queryAllReader(reader);
 	}
 
 	@Override
 	public List<Reader> queryReaderByPage(int start, int end ,@Param("reader") Reader reader) {
 		
 		return readerDao.queryReaderByPage(start, end,reader);
+	}
+
+	@Override
+	public int deleteReader(Long readerId) {
+		
+		return readerDao.deleteReader(readerId);
 	}
 
 }

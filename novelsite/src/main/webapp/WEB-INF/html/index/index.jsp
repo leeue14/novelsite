@@ -632,149 +632,23 @@
 			</div>
 			<div class="book_list">
 				<ul>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
+				<c:forEach var="item" items="${requestScope.bookLists}">
+				<li> 
+				<a target="_blank" class="green  fl" style="font-size: 14px;"
+						href="/novelsite/localbook/querybook?bookid=${item.bookId }">${item.name}</a> 
+						<em><a
+							class="gray2 fl" title="${item.chapterName }"
+							href="/novelsite/localbook/querybook?bookid=${item.bookId }">
+								${item.chapterName }</a></em> 
+						<b class="fr gray2"
+						style="font-size: 13px;    font-weight:normal;">${item.uploadTime }</b>
 						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
-						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
-						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
-						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
-						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
-						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
-						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
-						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
-						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
-						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
-						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
-						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
-					<li><span><a target="_blank" class="gray2 fl"
-							href="http://chuangshi.qq.com/bk/xh/xx20003/">[玄幻]</a></span> <a
-						target="_blank" class="green  fl" style="font-size: 14px;"
-						href="http://chuangshi.qq.com/bk/yx/20381414.html">网游之异域风景</a> <em><a
-							class="gray2 fl" title="第1卷 第六十六章 窸窣碎语"
-							href="http://chuangshi.qq.com/bk/xh/AGkEMF1pVj8APFRnATgBYA-r-72.html">第1卷
-								第六十六章 窸窣碎语</a></em> <b class="fr gray2"
-						style="font-size: 13px;    font-weight:normal;">10-25 11:08:41</b>
-						<strong> <a target="_blank" class="gray2 clearfix fr"
-							href="http://account.book.qq.com/bk/author/ADFQOwduWWNcNAtqV2lTZgA6">血色印记</a>
-					</strong></li>
+							href="/novelsite/search/searchbook?bookName=${item.authorName }&pageNum=1">${item.authorName }</a>
+					</strong>
+					</li>
+				</c:forEach>
+					
+					
 
 				</ul>
 			</div>
@@ -929,7 +803,7 @@
 									<div class="login-common-wrap">
 										<div class="auto-login-box cf">
 											<div class="link fr">
-												<a href="https://aq.yuewen.com/welcome/validateuser"
+												<a href="##"
 													target="_blank" id="forgetPsw">忘记密码</a>
 											</div>
 											<input type="checkbox" id="autologin" tabindex="3"

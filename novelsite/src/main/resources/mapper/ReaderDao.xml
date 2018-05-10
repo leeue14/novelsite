@@ -75,7 +75,16 @@
 		status
 		FROM
 		tb_reader
-
+		<where>
+			<if test="readerCondition != null">
+				<if test="readerCondition != null">
+					AND nick_name LIKE '%${readerCondition.nickName}%'
+				</if>
+				<if test="readerCondition != null">
+					OR email LIKE '%${readerCondition.email}%'
+				</if>
+			</if>
+		</where>
 	</select>
 
 	<!-- 分页查找 -->
@@ -96,7 +105,28 @@
 		status
 		FROM
 		tb_reader
+		<where>
+			<if test="readerCondition != null">
+				<if test="readerCondition != null">
+					AND nick_name LIKE '%${readerCondition.nickName}%'
+				</if>
+				<if test="readerCondition != null">
+					OR email LIKE '%${readerCondition.email}%'
+				</if>
+			</if>
+		</where>
+		ORDER BY
+		reader_id DESC
 		limit
 		#{start},#{end}
 	</select>
+
+	<!-- 删除 -->
+	<delete id="deleteReader" parameterType="java.lang.Long">
+		UPDATE tb_reader 
+		<set>
+		status=0
+		</set>
+		where reader_id = #{readerId}
+	</delete>
 </mapper>

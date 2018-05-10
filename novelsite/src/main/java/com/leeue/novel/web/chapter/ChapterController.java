@@ -106,6 +106,7 @@ public class ChapterController {
 			modelMap.put("url", "/novelsite/chapter/edit?bookId="+setBook.getBookId());
 			return modelMap;
 		}catch (Exception e) {
+			e.printStackTrace();
 			modelMap.put("errMsg", e.getMessage());
 			modelMap.put("success", false);
 			return modelMap;

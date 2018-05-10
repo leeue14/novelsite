@@ -15,6 +15,10 @@ params:
   id: {书籍源id}
 }
 
+
+
+//搜索
+http://api.zhuishushenqi.com/book/fuzzy-search?query=遮天&start=0
 获取书籍源
 http://novel.juhe.im/book-sources?view=summary&book=567d2cb9ee0e56bc713cb2c0  bookid
 

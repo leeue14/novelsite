@@ -47,12 +47,12 @@
 				<li class="fenlei"><b class="top"><span>小说分类：</span> <!--    <a href="/bk/" id="a_Subjectid_active_">全部</a> -->
 						<c:forEach var="item" items="${requestScope.categoryParent}">
 							<c:if test="${item.categoryName== requestScope.major}">
-								<a class="active" href="/novelsite/stack/indexstack?pageNum=1&categoryParentId=${item.categoryId}&major=${item.categoryName}"
+								<a class="active" href="/novelsite/stack/indexstack?pageNum=1&categoryParentId=${item.categoryId}&parentId=${item.categoryId}&major=${item.categoryName}"
 									id="a_Subjectid_active_20001">${item.categoryName}</a>
 							</c:if>
 
 							<c:if test="${item.categoryName!= requestScope.major}">
-								<a class=""  href="/novelsite/stack/indexstack?pageNum=1&categoryParentId=${item.categoryId}&major=${item.categoryName}"
+								<a class=""  href="/novelsite/stack/indexstack?pageNum=1&categoryParentId=${item.categoryId}&parentId=${item.categoryId}&major=${item.categoryName}"
 									id="a_Subjectid_active_20001">${item.categoryName}</a>
 							</c:if>
 							<a rel="nofollow" href="&#10; " id="a_Contentid_active_"></a>

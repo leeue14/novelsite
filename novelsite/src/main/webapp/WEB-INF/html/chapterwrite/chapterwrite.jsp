@@ -35,11 +35,11 @@
 	<div class="wrap login">
 		<div class="header">
 			<div class="headBox pageCenter clearfix">
-				<a href="//write.qq.com"><img class="logo fl"
+				<a href="/novelsite/author/authorcenter"><img class="logo fl"
 					src="https://img1.write.qq.com/writer/p1/contentv2/logo.png"
 					width="225" height="28" alt="阅文·作家专区"></a>
 				<div class="headUser fr">
-					<a class="exit" href="/public/logout.html"><span class="icon"></span>退出登录</a>
+					<a class="exit" href="/novelsite/indexview/index"><span class="icon"></span>退出登录</a>
 				</div>
 			</div>
 		</div>
@@ -71,7 +71,7 @@
 					当前作品总数<span id="bookCount" class="blue Num">${sessionScope.booksCount}</span>本
 				</p>
 
-				<a id="create-book" class="create button"><em class="icon"></em>创建作品</a>
+				<a id="create-book" class="create button create-book"><em class="icon"></em>创建作品</a>
 
 			</div>
 			<!-- 存在作品 -->
@@ -173,7 +173,7 @@
 								<tr class="active">
 									<td colspan="7">
 										<div class="dib-wrap">
-											<a id="create-book" class=""
+											<a id="create-book" class="create-book"
 												style="padding:9px;background:#1FA9FF;border-radius: 3px;"
 												url-chapter="#" data-catid="20001" href="javascript:"><span
 												class="icon"></span><i style="color:#fff;">创建作品</i></a>
@@ -215,7 +215,7 @@
 	<script src="resources/js/chapterwrite/chapterwrite.js"
 		type="text/javascript"></script>
 	<script>
-		$('#create-book').on('click', function() {
+		$('.create-book').on('click', function() {
 			layer.open({
 				type : 2,
 				resize : false,
@@ -223,9 +223,26 @@
 				title : [ '创建书籍', 'font-size:18px;' ],
 				fixed : true,
 				area : [ '850px', '460px' ],
+				offset: ['150px', '450px'],
 				shadeClose : false, //点击遮罩关闭
 				content : 'common/createbook/createbook.jsp'
 			});
+		});
+		
+		$(function(){
+			function createBook(){
+				layer.open({
+					type : 2,
+					resize : false,
+					move : false,
+					title : [ '创建书籍', 'font-size:18px;' ],
+					fixed : true,
+					area : [ '850px', '460px' ],
+					offset: ['150px', '450px'],
+					shadeClose : false, //点击遮罩关闭
+					content : 'common/createbook/createbook.jsp'
+				});
+			}
 		});
 	</script>
 

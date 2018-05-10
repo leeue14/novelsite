@@ -47,5 +47,11 @@ public interface ChapterService {
 	/**
 	 * 查找总的章节数
 	 */
-	int findAllChaptersCount(Long bookId,int status);
+	Integer findAllChaptersCount(Long bookId,int status);
+	
+	/**
+	 * 查找最新更新的章节
+	 * @return
+	 */
+	List<Chapter> findUpdateChapters();
 }

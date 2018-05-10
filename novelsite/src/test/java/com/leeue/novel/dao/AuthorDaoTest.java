@@ -28,7 +28,7 @@ public class AuthorDaoTest extends BaseTest{
 			author.setIdCard("340823199504173114");
 			author.setQqNum("1264308835");
 			author.setShortInfo("我是一个业余好人");
-			author.setCreateTime(new Date());
+			author.setCreateTime(DateFormat.FormatDateSupport(new Date()));
 			authorDao.insertAuthor(author);
 	}
 	@Test
@@ -43,7 +43,7 @@ public class AuthorDaoTest extends BaseTest{
 	}
 	@Test
 	public void queryAuthorByReaderid(){
-		Author author = authorDao.queryAuthor(5L);
+		Author author = authorDao.queryAuthorById(5L);
 		System.out.println(author.getPenName());
 	}
 	

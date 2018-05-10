@@ -24,8 +24,8 @@ public interface ReaderService {
 	 * @param reader
 	 * @return
 	 */
-/*	int deleteReader(Reader reader);//停用 某个读者不是删除
-*/	/**
+	int deleteReader(@Param("readerId") Long readerId);//停用 某个读者不是删除
+	/**
 	 * 查找读者
 	 * @param emailAndPhone
 	 * @return
@@ -33,7 +33,7 @@ public interface ReaderService {
 	Reader queryReader(@Param("emailAndPhone")String emailAndPhone);//查找
 	
 	
-	List<Reader> queryAllReader();
+	List<Reader> queryAllReader(@Param("reader") Reader reader);
 	
 	List<Reader> queryReaderByPage(@Param("start") int start, @Param("end") int end, @Param("reader") Reader reader);
 }

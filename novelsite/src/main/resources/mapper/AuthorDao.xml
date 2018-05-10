@@ -9,9 +9,9 @@
 	<insert id="insertAuthor" useGeneratedKeys="true" keyColumn="author_id"
 		keyProperty="authorId">
 		INSERT INTO
-		tb_author(reader_id,pen_name,real_name,home_addr,phone,id_card,qq_num,short_info,create_time,email)
+		tb_author(reader_id,pen_name,real_name,home_addr,phone,id_card,qq_num,short_info,create_time,email,status)
 		VALUES
-		(#{readerId},#{penName},#{realName},#{homeAddr},#{phone},#{idCard},#{qqNum},#{shortInfo},#{createTime},#{email})
+		(#{readerId},#{penName},#{realName},#{homeAddr},#{phone},#{idCard},#{qqNum},#{shortInfo},#{createTime},#{email},#{status})
 	</insert>
 
 	<!-- 作者信息的更新-->
@@ -23,12 +23,13 @@
 			<if test="qqNum != null">qq_num=#{qqNum},</if>
 			<if test="email != null">email=#{email},</if>
 			<if test="shortInfo != null">short_info =#{shortInfo},</if>
+			<if test="status != null">status =#{status},</if>
 		</set>
 		where reader_id = #{readerId}
 	</update>
 	
 	<!-- 作者信息的查询 -->
-	<select id="queryAuthor" parameterType="int" resultType="com.leeue.novel.entity.Author">
+	<select id="queryAuthorById" parameterType="int" resultType="com.leeue.novel.entity.Author">
 		SELECT
 		author_id,
 		reader_id,
@@ -40,7 +41,8 @@
 		qq_num,
 		short_info,
 		create_time,
-		email
+		email,
+		status
 		FROM
 		tb_author
 		<where>
@@ -61,7 +63,8 @@
 		qq_num,
 		short_info,
 		create_time,
-		email
+		email,
+		status
 		FROM
 		tb_author
 		<where>
@@ -82,11 +85,78 @@
 		qq_num,
 		short_info,
 		create_time,
-		email
+		email,
+		status
 		FROM
 		tb_author
 		<where>
 			id_card = #{idCard}
 		</where>
+	</select>
+	
+	
+	
+	<!-- 查找所有作者 -->
+	<select id="queryAllAuthor" resultType="com.leeue.novel.entity.Author">
+		SELECT
+		author_id,
+		reader_id,
+		pen_name,
+		real_name,
+		home_addr,
+		phone,
+		id_card,
+		qq_num,
+		short_info,
+		create_time,
+		email,
+		status
+		FROM
+		tb_author
+		<where>
+			<if test="authorCondition != null">
+				<if test="authorCondition != null">
+					AND pen_name LIKE '%${authorCondition.penName}%'
+				</if>
+				<if test="authorCondition != null">
+					OR real_name LIKE '%${authorCondition.realName}%'
+				</if>
+			</if>
+		</where>
+		ORDER BY
+		author_id DESC
+	</select>
+	
+	<!-- 分页查找 -->
+	<select id="queryAuthorByPage" resultType="com.leeue.novel.entity.Author">
+		SELECT
+		author_id,
+		reader_id,
+		pen_name,
+		real_name,
+		home_addr,
+		phone,
+		id_card,
+		qq_num,
+		short_info,
+		create_time,
+		email,
+		status
+		FROM
+		tb_author
+		<where>
+			<if test="authorCondition != null">
+				<if test="authorCondition != null">
+					AND pen_name LIKE '%${authorCondition.penName}%'
+				</if>
+				<if test="authorCondition != null">
+					OR real_name LIKE '%${authorCondition.realName}%'
+				</if>
+			</if>
+		</where>
+		ORDER BY
+		author_id DESC
+		limit
+		#{start},#{end}
 	</select>
 </mapper>

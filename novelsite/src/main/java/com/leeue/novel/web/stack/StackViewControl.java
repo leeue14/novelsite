@@ -49,6 +49,7 @@ public class StackViewControl {
 			//请求到了子类型
 			request.setAttribute("category", categoryService.queryCategory(categoryParentId));
 			
+			System.out.println("子类型:"+categoryService.queryCategory(categoryParentId));
 			//再获取子类型
 			request.setAttribute("catagory", NetBookApi.getMinCats(request));
 				int pageNum = HttpServletRequestUtil.getInt(request, "pageNum");
@@ -114,6 +115,9 @@ public class StackViewControl {
 				}
 				
 				request.setAttribute("minor", minor);//子分类
+				//父分类
+				Long parentId =  HttpServletRequestUtil.getLong(request, "parentId");
+				request.setAttribute("parentId", parentId);//
 				
 				request.setAttribute("typeName", major+"-"+minor+"小说推荐");
 				request.setAttribute("pageLink", "/novelsite/search/searchindex");

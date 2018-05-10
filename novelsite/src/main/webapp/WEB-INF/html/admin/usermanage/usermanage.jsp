@@ -87,14 +87,16 @@
 	text-overflow: ellipsis;
 }
 
-a:hover{
-	text-decoration:none;
+a:hover {
+	text-decoration: none;
 }
-a:hover, .active a {
-    color: #333;
+
+a:hover,.active a {
+	color: #333;
 }
-.tda{
-	color:#333;
+
+.tda {
+	color: #333;
 }
 </style>
 </head>
@@ -108,27 +110,11 @@ a:hover, .active a {
 					<table class="table">
 						<tbody class="text-c">
 							<tr>
-								<td><label>用户名：</label></td>
+								<td><label>&nbsp;&nbsp;&nbsp;&nbsp;</label></td>
 								<td><input type="text" class="input-text radius" value=""
-									placeholder="" id="username" name="username"></td>
-								<!--   <td>
-                            <label>客户级别：</label></td>
-                        <td><select class="select radius" size="1" name="demo1" style="height: 35px;width: 120px;">
-                            <option value="" selected>默认select</option>
-                            <option value="1">菜单一</option>
-                            <option value="2">菜单二</option>
-                            <option value="3">菜单三</option>
-                        </select></td>
-                        <td> -->
-								<!--    <label>客户来源：</label></td>
-                        <td><select class="select radius" size="1" name="demo1" style="height: 35px;width: 120px;">
-                            <option value="" selected>默认select</option>
-                            <option value="1">菜单一</option>
-                            <option value="2">菜单二</option>
-                            <option value="3">菜单三</option>
-                        </select></td> -->
-								<td><input id="search" type="submit"
-									class="btn btn-primary radius" style="width: 60px;" value="搜索"></input>
+									placeholder="输入用户名或邮箱" id="name" name="name"></td>
+								<td><a id="search" href="/novelsite/usermanage/usermanageindex"
+										class="btn btn-primary radius" style="width: 60px;" value="搜索">搜索</a>
 								</td>
 							</tr>
 							<tr>
@@ -146,20 +132,33 @@ a:hover, .active a {
 											</tr>
 										</thead>
 										<tbody id="tbody">
-											<c:forEach var="item" items="${requestScope.readerPageBean.list}"
+											<c:forEach var="item"
+												items="${requestScope.readerPageBean.list}"
 												varStatus="status">
 												<tr class="active">
-													<td class="tdhidden " ><a class="tda" title="${item.nickName }">${item.nickName }</a></td>
-													<td class="tdhidden"><a class="tda" title="${item.createTime }">${item.createTime }</a></td>
-													<td class="tdhidden"><a class="tda" title="${item.email}">${item.email}</a></td>
+													<td class="tdhidden "><a class="tda"
+														title="${item.nickName }">${item.nickName }</a></td>
+													<td class="tdhidden"><a class="tda"
+														title="${item.createTime }">${item.createTime }</a></td>
+													<td class="tdhidden"><a class="tda"
+														title="${item.email}">${item.email}</a></td>
 													<td
 														style="overflow:hidden;width:200px;white-space:nowrap;text-overflow:ellipsis;">
-														<a class="tda" title="${item.shortInfo}">${item.shortInfo}</a></td>
+														<a class="tda" title="${item.shortInfo}">${item.shortInfo}</a>
+													</td>
 													<%-- <td class="tdhidden"><a class="tda">${item.status}</a></td> --%>
-
-													<td colspan="" ><!-- <input class="btn btn-primary radius"
-														type="button" value="禁用"> --> <input
-														class="btn btn-danger radius" type="button" value="删除">
+													<td colspan="">
+													
+													<c:if test="${item.status==0}">
+													 <a href="/novelsite/usermanage/userdelete?readerId=${item.readerId }&status=1"
+														class="btn btn-success radius" type="button" value="删除">启用</a>
+													</c:if>
+													
+													<c:if test="${item.status==1}">
+													 <a href="/novelsite/usermanage/userdelete?readerId=${item.readerId }&status=0"
+														class="btn btn-danger radius" type="button" value="删除">停用</a>
+													</c:if>
+														
 													</td>
 												</tr>
 
@@ -184,39 +183,39 @@ a:hover, .active a {
 							</tr>
 						</tbody>
 					</table>
-					
+
 					<div class="c-full-page">
-				<span class="total">共<span class="c-gold">${requestScope.readerPageBean.totalPage}</span>页
+						<span class="total">共<span class="c-gold">${requestScope.readerPageBean.totalPage}</span>页
 
-				</span>
-				<c:if test="${requestScope.readerPageBean.pageNum >1 }">
-					<a
-						href="/novelsite/usermanage/usermanageindex?pageNum=${requestScope.readerPageBean.pageNum-1}&bookName=${requestScope.bookName}"
-						class="prev">上一页</a>
-				</c:if>
-				
-				<c:forEach var="i" step="1"
-					begin="${requestScope.readerPageBean.start}"
-					end="${requestScope.readerPageBean.end}">
-					<ul class="pageNumber">
-						<c:if test="${requestScope.readerPageBean.pageNum == i}">
-							<li class="active"><a
-								href="/novelsite/usermanage/usermanageindex?pageNum=${i}&bookName=${requestScope.bookName}">${i}</a></li>
-						</c:if>
-						<c:if test="${requestScope.readerPageBean.pageNum != i}">
-							<li class=""><a
-								href="/novelsite/usermanage/usermanageindex?pageNum=${i}&bookName=${requestScope.bookName}">${i}</a></li>
+						</span>
+						<c:if test="${requestScope.readerPageBean.pageNum >1 }">
+							<a
+								href="${requestScope.link}pageNum=${requestScope.readerPageBean.pageNum-1}"
+								class="prev">上一页</a>
 						</c:if>
 
-					</ul>
-				</c:forEach>
-				<c:if
-					test="${requestScope.readerPageBean.pageNum < requestScope.readerPageBean.totalPage}">
-					<a
-						href="/novelsite/usermanage/usermanageindex?pageNum=${requestScope.readerPageBean.pageNum+1}"
-						class="next">下一页</a>
-				</c:if>
-				<%-- <div class="jump">
+						<c:forEach var="i" step="1"
+							begin="${requestScope.readerPageBean.start}"
+							end="${requestScope.readerPageBean.end}">
+							<ul class="pageNumber">
+								<c:if test="${requestScope.readerPageBean.pageNum == i}">
+									<li class="active"><a
+										href="${requestScope.link}pageNum=${i}">${i}</a></li>
+								</c:if>
+								<c:if test="${requestScope.readerPageBean.pageNum != i}">
+									<li class=""><a
+										href="${requestScope.link}pageNum=${i}">${i}</a></li>
+								</c:if>
+
+							</ul>
+						</c:forEach>
+						<c:if
+							test="${requestScope.readerPageBean.pageNum < requestScope.readerPageBean.totalPage}">
+							<a
+								href="${requestScope.link}pageNum=${requestScope.readerPageBean.pageNum+1}"
+								class="next">下一页</a>
+						</c:if>
+						<%-- <div class="jump">
 					<span>跳转到</span> <input id="page-input" class="page-input"
 						type="text" name="pageNumber" value="">
 					<button id="page-go" class="page-go" type="button"
@@ -224,18 +223,18 @@ a:hover, .active a {
 					data-name="${requestScope.bookName }"
 						data-total="${requestScope.readerPageBean.totalPage}">GO</button>
 				</div> --%>
-			</div>
-		
+					</div>
+
 				</div>
 			</div>
-		
-		
-		
-		
+
+
+
+
 		</div>
-	
-	
-	
+
+
+
 	</div>
 
 
@@ -255,26 +254,33 @@ a:hover, .active a {
 
 
 	<script>
-		/* 	$(function() {
-				$.ajax({
-					url : "/novelsite/readeroperation/findalluser",
-					type : "POST",
-					contentType : false,
-					processData : false,
-					cache : false,
-					success : function(data) {
-						if (data.success) {
-							var htmlStr = "";
-							var readers = data.readers;
-							for (var i = 0; i < readers.length; i++) {
-								html += "<tr class='active'><td>"
-										+ readers[i].nickName + "</td>";
-							}
-							$("tbody").html(htmlStr);
-						}
+		/* 搜索 */
+		function search() {
+			 var name = $("#name").val();
+			var formData = new FormData();
+			formData.append("name",name);
+			var url = "/novelsite/usermanage/usermanagesearch" 
+			$.ajax({
+				url : "/novelsite/usermanage/usermanagesearch",
+				type : "POST",
+				contentType : false,
+				processData : false,
+				cache : false,
+				data : formData,
+				success : function(data) {
+					if (data.success) {
+						
 					}
+				}
+			}); 
+		}
+		
+		$(function(){
+			$("#name").change(function(){
+				  var name = $("#name").val();
+				  $("#search").attr("href","/novelsite/usermanage/usermanagesearch?name="+name);
 				});
-			}); */
+		});
 	</script>
 </body>
 </html>

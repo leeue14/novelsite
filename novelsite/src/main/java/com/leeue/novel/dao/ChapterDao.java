@@ -49,4 +49,10 @@ public interface ChapterDao {
 	 */
 	int findAllChaptersCount(@Param("bookId")Long bookId,@Param("status")int status);
 	
+	/**
+	 * 查找最新更新的章节
+	 * @return
+	 */
+	List<Chapter> findUpdateChapters();
+	
 }

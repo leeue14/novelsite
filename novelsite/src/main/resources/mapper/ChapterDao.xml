@@ -58,9 +58,9 @@
 	</select>
 
 	<!-- 查询所有的章节总数 -->
-	<select id="findAllChaptersCount" parameterType="int" resultType="int">
+	<select id="findAllChaptersCount" parameterType="int" resultType="java.lang.Integer">
 		SELECT
-		max(chapter_num)
+		IFNULL(max(chapter_num),0) 
 		FROM
 		tb_chapter
 		<where>
@@ -68,4 +68,21 @@
 			and book_id = #{bookId}
 		</where>
 	</select>
+	
+	
+	<!-- 查询最新更新的章节 -->
+	<select id="findUpdateChapters" 
+		resultType="com.leeue.novel.entity.Chapter">
+		SELECT
+		chapter_id,chapter_num,chapter_name,upload_time,book_id,body,world_count,is_vip,status
+		FROM
+		tb_chapter
+		<where>
+			and status = 1
+		</where>
+		ORDER BY
+		chapter_id DESC
+		LIMIT 0, 15
+	</select>
+	
 </mapper>

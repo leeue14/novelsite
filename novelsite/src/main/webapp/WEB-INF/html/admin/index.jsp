@@ -102,14 +102,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <dt><i class="Hui-iconfont">&#xe616;</i> 用户管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a id="getReaders" data-href="/novelsite/usermanage/usermanageindex?pageNum=1"data-title="用户列表" href="javascript:void(0)">用户列表</a></li>
+                    <li><a id="getReaders" data-href="/novelsite/usermanage/usermanageindex"data-title="读者管理" href="javascript:void(0)">读者管理</a></li>
+                      <li><a id="getReaders" data-href="/novelsite/authormanage/authormanageindex"data-title="作者管理" href="javascript:void(0)">作者管理</a></li>
                 </ul>
             </dd>
             
-            <dt><i class="Hui-iconfont">&#xe616;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dt><i class="Hui-iconfont">&#xe616;</i>管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="usermanage/usermanage.jsp" data-title="用户列表" href="javascript:void(0)">用户列表</a></li>
+                    <li><a data-href="/novelsite/admin/adminmanage" data-title="新增管理员" href="javascript:void(0)">新增管理员</a></li>
+                </ul>
+            </dd>
+            
+            <dt><i class="Hui-iconfont">&#xe616;</i>新闻管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="/novelsite/newsmanage/index" data-title="发布新闻" href="javascript:void(0)">发布新闻</a></li>
                 </ul>
             </dd>
         </dl>

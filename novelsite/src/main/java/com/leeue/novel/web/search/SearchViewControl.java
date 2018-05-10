@@ -77,7 +77,7 @@ public class SearchViewControl {
 		//获取网络书籍
 		try {
 			JSONObject jsonBooks = NetBookApi.searchBook(request, bookName);
-			List<Object> netBooks = ((JSONObject)jsonBooks.get("data")).getJSONArray("books");
+			List<Object> netBooks = jsonBooks.getJSONArray("books");
 			List<Object> allBooks = new ArrayList<>();
 			//网络书籍和本地书籍合并
 			

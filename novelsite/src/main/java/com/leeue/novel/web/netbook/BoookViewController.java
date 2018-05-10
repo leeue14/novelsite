@@ -72,10 +72,19 @@ public class BoookViewController {
 		// 获取小说站点
 		HashMap<String, Object> bookSite = (HashMap<String, Object>) bookController
 				.getBookSite(request);
-		JSONObject site = (JSONObject) bookSite.get("siteinfo");
-		// 获取小说来源站的全部站点数据
+		
+		System.out.println("hahhhhhhhhhh"+bookSite);
 		@SuppressWarnings("unchecked")
-		List<Object> listSite = (List<Object>) site.get("data");
+		List<Object> listSite = (List<Object>) bookSite.get("siteinfo");
+		/**
+		 * JSONObject site = (JSONObject) bookSite.get("siteinfo");
+		 */
+		// 获取小说来源站的全部站点数据
+		//@SuppressWarnings("unchecked")
+		/**
+		 * List<Object> listSite = (List<Object>) site.get("data");
+		 */
+		
 		for (int i = 0; i < listSite.size(); i++) {
 			System.out.println("站点" + ((JSONObject) listSite.get(i)));
 		}

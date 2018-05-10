@@ -44,4 +44,10 @@ public class AdminViewCotrol {
 		return "admin/login/login";
 	}
 	
+	@RequestMapping(value="adminmanage")
+	public String adminMageage(HttpServletRequest request,HttpServletResponse response){
+		
+		return "admin/adminmanage/adminmanage";
+	}
+	
 }

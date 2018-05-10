@@ -20,8 +20,9 @@ public class Author {
 	private String idCard;// 身份证号
 	private String qqNum;// qq 号
 	private String shortInfo;// 简介
-	private Date createTime;// 注册作者的时间
+	private String createTime;// 注册作者的时间
 	private String email;
+	private int status;
 
 	public Long getAuthorId() {
 		return authorId;
@@ -95,11 +96,12 @@ public class Author {
 		this.shortInfo = shortInfo;
 	}
 
-	public Date getCreateTime() {
+	
+	public String getCreateTime() {
 		return createTime;
 	}
 
-	public void setCreateTime(Date createTime) {
+	public void setCreateTime(String createTime) {
 		this.createTime = createTime;
 	}
 
@@ -111,4 +113,13 @@ public class Author {
 		this.email = email;
 	}
 
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
+	
+	
 }

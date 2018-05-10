@@ -12,7 +12,8 @@ $(function() {
 		$("#draftList li").click(function() {
 			var chapterId = $(this).data("chapterid");
 			clickLi = $(this);// 当前点击的li对象先保存下来
-
+			
+		
 			if (isNewChapter == 1) {
 				layer.confirm('是否保存新章节？', {
 					btn : [ '保存', '离开' ]
@@ -119,6 +120,10 @@ $(function() {
 		var chapter = {};
 		var chapterId = clickLi.data("chapterid");
 		chapter.chapterId = chapterId;
+		if(chapterId == null){
+			layer.msg("没有章节或者没选中章节");
+			return ;
+		}
 		chapter.status = 1;//发布章节 status ==1
 		chapter.chapterName = chapterName;
 		chapter.body = chapterBody;
@@ -157,15 +162,21 @@ $(function() {
 	
 	// 保存章节
 	function saveChapter() {
+		
 		var url = "/novelsite/chapteroperation/insertchapter";
 
 		var chapterName = $("#chapterTitleInput").val();
 		var isVip = $("#isVip option:selected").data("id");
 		var chapterBody = $("#chapterContentInput").val();
+	//	alert("保存chapterId="+chapterId+chapterName+chapterBody);
+		if(typeof(chapterName) == 'undefined' || typeof(chapterBody) == 'undefined'){
+			layer.msg("没有章节或者没选中章节");
+			return ;
+		}
 		if (chapterBody != "" && chapterName != "") {
 			var chapter = {};
 			var chapterId = clickLi.data("chapterid");
-
+			//alert("保存chapterId="+chapterId+chapterName+chapterBody);
 			if (chapterId != -1) {
 				chapter.chapterId = chapterId;
 				url = "/novelsite/chapteroperation/updatechapter"
@@ -184,6 +195,7 @@ $(function() {
 				processData : false,
 				cache : false,
 				success : function(data) {
+					//alert("data.success="+data.success);
 					if (data.success) {
 						layer.msg("保存成功", function() {
 							if (data.redirct) {
@@ -194,6 +206,8 @@ $(function() {
 							}
 						});
 
+					}else{
+						layer.msg("保存失败");
 					}
 
 				}
@@ -221,10 +235,14 @@ $(function() {
 	
 	//删除章节
 	$("#deleteDraftBtn").click(function(){
-		layer.msg("删除");
+		
 		var chapterId = clickLi.data("chapterid");
 		if(chapterId == -1){
 			return;
+		}
+		if(chapterId == null){
+			layer.msg("没有章节或者没选中章节");
+			return ;
 		}
 		var formData = new FormData();
 		formData.append("chapterId", chapterId);

@@ -25,12 +25,12 @@
 <body>
 	<div class="wrap login">
 		<div class="header">
-			<div class="headBox pageCenter cf">
-				<a href="//write.qq.com"><img class="logo fl"
-					src="resources/images/authorcenter/logo.png" width="225"
-					height="28" alt="阅文·作家专区"></a>
+			<div class="headBox pageCenter clearfix">
+				<a href="/novelsite/author/authorcenter"><img class="logo fl"
+					src="https://img1.write.qq.com/writer/p1/contentv2/logo.png"
+					width="225" height="28" alt="阅文·作家专区"></a>
 				<div class="headUser fr">
-					<a class="exit" href="#"><span class="icon"></span>退出登录</a>
+					<a class="exit" href="/novelsite/indexview/index"><span class="icon"></span>退出登录</a>
 				</div>
 			</div>
 		</div>
@@ -75,8 +75,8 @@
 
 		</div>
 	</div>
-	<iframe src="common/footer/footer.html" width="100%"  height="150px"
-		scrolling="no" frameborder='0' style="margin: 0;padding: 0;position: fixed;bottom: 0px;"></iframe>
+	<iframe src="common/footer/footer.html" width="100%" height="110"
+		scrolling="no" frameborder='0' style="position: relative;bottom: 0px;"></iframe>
 
 	<!-- 公共js -->
 	<script src="resources/lib/jquery/1.9.1/jquery.js"

@@ -11,6 +11,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import org.apache.ibatis.javassist.bytecode.stackmap.MapMaker;
@@ -42,13 +43,19 @@ public class BookController {
 		
 		request.getSession().setAttribute("bookid", bookId);
 		try {
-			String data = HttpJsonUtil.getJson("http://novel.juhe.im/book-info/"+bookId);
+			String data = HttpJsonUtil.getJson("http://api.zhuishushenqi.com/book/"+bookId);
 			System.out.println(data);
 			if(data!=null && !data.equals("")){
 				@SuppressWarnings("unchecked")
 				String dataStr = data.replace("null", "\"\"");
-				JSONObject bookinfo = JSONObject.fromObject(dataStr);
-				String updateStr = ((JSONObject)bookinfo.get("data")).getString("updated");
+				/**JSONObject bookinfo = JSONObject.fromObject(dataStr);**/
+				JSONObject data2 = JSONObject.fromObject(dataStr);
+				Map<String, Object> bookinfo = new HashMap<>();
+				bookinfo.put("data", data2);
+				
+				String  updateStr = data2.getString("updated");
+				/**http://novel.juhe.im/ 不可用了**/
+				//String updateStr = ((JSONObject)bookinfo.get("data")).getString("updated");
 				
 			//	updateStr = DateFormat.FormatDateSupport(updateStr);
 				
@@ -74,10 +81,15 @@ public class BookController {
 		
 		try {
 			String bookId = HttpServletRequestUtil.getString(request, "bookid");
-			String data = HttpJsonUtil.getJson("http://novel.juhe.im/book-sources?view=summary&book="+bookId);
-			JSONObject siteInfo = JSONObject.fromObject(data);
+			String data = HttpJsonUtil.getJson("http://api.zhuishushenqi.com/toc?view=summary&book="+bookId);
+		/*
+		 * 	JSONObject siteInfo = JSONObject.fromObject(data);
+		 */
+			JSONArray siteInfo = JSONArray.fromObject(data);
+			
 			modelMap.put("siteinfo", siteInfo);
 			modelMap.put("success", true);
+			
 			return modelMap;
 		} catch (Exception e) {
 			modelMap.put("success", false);
@@ -126,10 +138,9 @@ public class BookController {
 		} catch (Exception e) {
 			//modelMap.put("chapterDetail", chapterDetail);
 			modelMap.put("chapterbody", "章节内容获取失败，请更换");
-			modelMap.put("success", true);
 			modelMap.put("success", false);
 			modelMap.put("errMsg", e.getMessage());
-		//	e.printStackTrace();
+			e.printStackTrace();
 		}
 		
 		

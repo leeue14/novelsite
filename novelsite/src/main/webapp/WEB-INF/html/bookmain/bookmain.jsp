@@ -133,7 +133,7 @@
 							<p id="textauthor">作者：</p>
 							<p>
 								<a
-									href="http://account.book.qq.com/bk/author/ADdQOQdqWWhcMgtoV2VTYAA7WzY%25253D">${sessionScope.modelmapbookinfo.bookinfo.data.author}</a>
+									href="#">${sessionScope.modelmapbookinfo.bookinfo.data.author}</a>
 							</p>
 						</div>
 						<div class="shortintro">
@@ -173,7 +173,7 @@
 						</div>
 						<div class="chapternev">
 							<a
-								href="/novelsite/bookview/bookdetail?title=${lastchapterinfo.lastchaptertitle}&bookId=${sessionScope.modelmapbookinfo.bookinfo.data._id}&url=${lastchapterinfo.lastchapterlink}"
+								href="/novelsite/bookview/bookdetail?bookid=${sessionScope.modelmapbookinfo.bookinfo.data._id}&title=${lastchapterinfo.lastchaptertitle}&url=${lastchapterinfo.lastchapterlink}&index=${lastchapterinfo.lastindex}"
 								rel="nofollow"> <c:set var="vEnter" value="${vEnter}" /> <c:set
 									var="b" value="<p>" /> <%-- 	<c:set var="info" value='${updateChapterDetail.chapterbody}' /> 
 									<c:forEach var="item" items="${fn:split(info, '\\\n') }">

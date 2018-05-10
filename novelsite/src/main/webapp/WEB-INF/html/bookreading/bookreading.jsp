@@ -87,9 +87,9 @@
 		<div id="readWrap" class="readWrap w800">
 			<div class="bookNav">
 				<a href="/novelsite/indexview/index" target="_blank">轩文阁中文网</a>&gt; <a
-					href="http://chuangshi.qq.com/bk/huan/" target="_blank">${sessionScope.modelmapbookinfo.bookinfo.data.majorCate}</a>&gt;
-				<a href="http://chuangshi.qq.com/bk/xh/xx20002/" target="_blank">${sessionScope.modelmapbookinfo.bookinfo.data.minorCate}</a>&gt;
-				<a href="http://chuangshi.qq.com/bk/xh/20816669.html">${sessionScope.modelmapbookinfo.bookinfo.data.title}</a>
+					href="javascript:0;" target="_blank">${sessionScope.modelmapbookinfo.bookinfo.data.majorCate}</a>&gt;
+				<a href="javascript:0;" target="_blank">${sessionScope.modelmapbookinfo.bookinfo.data.minorCate}</a>&gt;
+				<a href="javascript:0;">${sessionScope.modelmapbookinfo.bookinfo.data.title}</a>
 			</div>
 			<div data-node="chapterBox" data-uuid="1" data-volumeid="1"
 				class="textbox">
@@ -99,7 +99,7 @@
 						<em> 小说：<a class="story" target="_blank"
 							href="/novelsite/bookview/bookcatalog?hostId=${sessionScope.hostid}&bookId=${sessionScope.modelmapbookinfo.bookinfo.data._id}">${sessionScope.modelmapbookinfo.bookinfo.data.title}</a>
 							作者： <a class="author" target="_blank"
-							href="http://account.book.qq.com/bk/author/ADdQOQdqWWhcMgtoV2VTYAA7WzY%25253D">${sessionScope.modelmapbookinfo.bookinfo.data.author}</a></em>
+							href="/novelsite/search/searchbook?bookName=${sessionScope.modelmapbookinfo.bookinfo.data.author}&pageNum=1">${sessionScope.modelmapbookinfo.bookinfo.data.author}</a></em>
 
 					</p>
 					<!--头像修改-->

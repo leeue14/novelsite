@@ -106,6 +106,11 @@ public class ReaderController {
 				modelMap.put("errMsg", "密码错误");
 				return modelMap;
 			}
+			if(havaReader!=null && havaReader.getStatus()==0){
+				modelMap.put("success", false);
+				modelMap.put("errMsg", "该账号已被禁止登录");
+				return modelMap;
+			}
 			if (havaReader != null
 					&& havaReader.getEmail().equals(reader.getEmail())) {
 				//把登录的信息存入session中
@@ -123,6 +128,10 @@ public class ReaderController {
 					modelMap.put("url", "/novelsite/indexview/index");
 				}
 				return modelMap;
+			}else{
+				modelMap.put("success", false);
+				modelMap.put("errMsg", "该账号不存在");
+				return modelMap;
 			}
 
 		} catch (Exception e) {
@@ -131,7 +140,7 @@ public class ReaderController {
 			modelMap.put("errMsg", e.getMessage());
 			return modelMap; // 失败返回
 		}
-		return modelMap;
+	//	return modelMap;
 	}
 	
 	/**
@@ -179,7 +188,7 @@ public class ReaderController {
 	@ResponseBody
 	public Map<String, Object> findalluser(HttpServletRequest request,HttpServletResponse response) {
 		Map<String, Object> modelMap = new HashMap<String, Object>();
-		List<Reader> readers = readerService.queryAllReader();
+		List<Reader> readers = readerService.queryAllReader(null);
 		System.out.println(readers);
 		request.setAttribute("readers", readers);
 		

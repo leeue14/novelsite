@@ -1,5 +1,7 @@
 package com.leeue.novel.web.user.author;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.leeue.novel.entity.News;
+import com.leeue.novel.service.NewsService;
 
 /**
  * 
@@ -19,12 +24,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value="/author",method=RequestMethod.GET)
 public class AuthorViewController {
 	
+	@Autowired
+	NewsService newsService;
 	@RequestMapping(value="regist",method=RequestMethod.GET)
 	public String regist(Model model,HttpServletRequest request){
 		return "authorregist/authorregist";
 	}
 	@RequestMapping(value="authorcenter",method=RequestMethod.GET)
-	public String authorCenter(Model model,HttpServletRequest request){
+	public String authorCenter(HttpServletRequest request){
+		//查找新闻放入
+		List<News> newsList = newsService.findTenNews();
+		request.setAttribute("xinwen", newsList);
+		
+		System.out.println("-----"+newsList.size());
 		return "authorcenter/authorcenter";
 	}
 	

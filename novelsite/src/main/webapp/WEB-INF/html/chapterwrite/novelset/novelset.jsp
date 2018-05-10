@@ -33,11 +33,11 @@
 	<div class="wrap login">
 		<div class="header">
 			<div class="headBox pageCenter clearfix">
-				<a href="//write.qq.com"><img class="logo fl"
+				<a href="/novelsite/author/authorcenter"><img class="logo fl"
 					src="https://img1.write.qq.com/writer/p1/contentv2/logo.png"
 					width="225" height="28" alt="阅文·作家专区"></a>
 				<div class="headUser fr">
-					<a class="exit" href="/public/logout.html"><span class="icon"></span>退出登录</a>
+					<a class="exit" href="/novelsite/indexview/index"><span class="icon"></span>退出登录</a>
 				</div>
 			</div>
 		</div>
@@ -71,7 +71,7 @@
 			<div class="msgBoxTitle">
 				<!--id="createDraftIconBtn"-->
 				<a class="create button"
-					href="/booknovels/chaptertmp/CBID/9034273403565303/addType/1.html"><em
+					href="/novelsite/chapter/edit?bookId=${sessionScope.setBook.bookId}"><em
 					class="icon"></em>新建章节</a>
 				<!--<span class="minTipBox"><b class="down"></b><cite class="icon close"></cite>点此按钮即可新建章节</span>-->
 				<div class="tabSwitch clearfix">
@@ -210,6 +210,7 @@
 				title : [ '修改书籍', 'font-size:18px;' ],
 				fixed : true,
 				area : [ '850px', '560px' ],
+				offset: ['150px', '450px'],
 				shadeClose : false, //点击遮罩关闭
 				content : 'common/createbook/setbook.jsp'
 			});

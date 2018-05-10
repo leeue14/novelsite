@@ -32,8 +32,8 @@ public interface ReaderDao {
 	 * @param reader
 	 * @return
 	 */
-/*	int deleteReader(Reader reader);//停用 某个读者不是删除
-*/	/**
+	int deleteReader(@Param("readerId") Long readerId);//停用 某个读者不是删除
+	/**
 	 * 查找读者
 	 * @param emailAndPhone
 	 * @return
@@ -45,11 +45,11 @@ public interface ReaderDao {
 	 * 查找所有读者
 	 * @return
 	 */
-	List<Reader> queryAllReader();
+	List<Reader> queryAllReader(@Param("readerCondition")Reader reader);
 	
 	/**
 	 * 分页查找
 	 */
-	List<Reader> queryReaderByPage(@Param("start") int start, @Param("end") int end,@Param("reader") Reader reader);
+	List<Reader> queryReaderByPage(@Param("start") int start, @Param("end") int end,@Param("readerCondition") Reader reader);
 	
 }

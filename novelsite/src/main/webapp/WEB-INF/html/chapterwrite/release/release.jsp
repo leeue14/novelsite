@@ -33,11 +33,11 @@
 	<div class="wrap login">
 		<div class="header">
 			<div class="headBox pageCenter clearfix">
-				<a href="//write.qq.com"><img class="logo fl"
+				<a href="/novelsite/author/authorcenter"><img class="logo fl"
 					src="https://img1.write.qq.com/writer/p1/contentv2/logo.png"
 					width="225" height="28" alt="阅文·作家专区"></a>
 				<div class="headUser fr">
-					<a class="exit" href="/public/logout.html"><span class="icon"></span>退出登录</a>
+					<a class="exit" href="/novelsite/indexview/index"><span class="icon"></span>退出登录</a>
 				</div>
 			</div>
 		</div>
@@ -205,7 +205,9 @@
 										<textarea name="content" id="chapterContentInput"
 											placeholder=""
 											style="color: rgb(51, 51, 51);">${sessionScope.chapter.body }</textarea>
-
+											<%-- <c:if test="${sessionScope.editCount==0 }">
+										暂无章节，点击新建
+										</c:if> --%>
 									</div>
 								</div>
 						</div>

@@ -13,6 +13,8 @@ public class Admin {
 	private String password;
 	private int power;//
 	private String email;
+	private int status;
+	
 	public Long getAdminId() {
 		return adminId;
 	}
@@ -43,5 +45,13 @@ public class Admin {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
+	
+	
 	
 }

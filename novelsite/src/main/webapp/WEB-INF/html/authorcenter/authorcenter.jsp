@@ -5,7 +5,9 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -30,11 +32,11 @@
 	<div class="wrap login">
 		<div class="header">
 			<div class="headBox pageCenter clearfix">
-				<a href="//write.qq.com"><img class="logo fl"
+				<a href="/novelsite/author/authorcenter"><img class="logo fl"
 					src="https://img1.write.qq.com/writer/p1/contentv2/logo.png"
 					width="225" height="28" alt="阅文·作家专区"></a>
 				<div class="headUser fr">
-					<a class="exit" href="/public/logout.html"><span class="icon"></span>退出登录</a>
+					<a class="exit" href="/novelsite/indexview/index"><span class="icon"></span>退出登录</a>
 				</div>
 			</div>
 		</div>
@@ -84,12 +86,23 @@
 				<div class="newsListWrap">
 					<!-- 新闻列表 -->
 					<ul id="newsList">
-						<li class="act"><a data-node="link" data-newsid="1073288"
-							class="link visited" href="/News?id=1073288" target="_blank"><em>2018.01.15
-									16:44</em><span class=""></span>华语悬疑大赛评奖预告</a></li>
-						<li><a data-node="link" data-newsid="1073287" class="link"
+					<c:forEach var="item" items="${requestScope.xinwen}"  varStatus="status">
+					
+						<li class="act">
+						<a data-node="link" data-newsid="1073288"
+							class="link " href="/novelsite/newsmanage/readnews?id=${item.newsId }" target="_blank">
+							<em>${item.uploadDate}</em>
+							<span class="on"></span>${item.newsTitle}</a>
+						</li> 
+						
+					</c:forEach>
+						
+									
+						<!--  <li><a data-node="link" data-newsid="1073287" class="link visited"
 							href="/News?id=1073287" target="_blank"><em>2017.12.28
-									13:59</em><span class="on"></span>月票大战一触即发，双倍月票限时开启！</a></li>
+									13:59</em><span class="on">
+									</span>月票大战一触即发，双倍月票限时开启！</a></li> -->
+					<!--
 						<li><a data-node="link" data-newsid="1073286" class="link"
 							href="/News?id=1073286" target="_blank"><em>2017.12.08
 									18:09</em><span class="on"></span>2017泛灵异征文报名进入最后冲刺阶段</a></li>
@@ -113,16 +126,16 @@
 									13:04</em><span class="on"></span>历史新纪元征文结果公布</a></li>
 						<li><a data-node="link" data-newsid="1073275" class="link"
 							href="/News?id=1073275" target="_blank"><em>2017.09.28
-									09:57</em><span class="on"></span>嗨翻黄金周 月票双倍投起来</a></li>
+									09:57</em><span class="on"></span>嗨翻黄金周 月票双倍投起来</a></li> -->
 					</ul>
 				</div>
 			</div>
 			<div id="pagerBox" class="pageBox fr">
-				<p>
+				<%-- <p>
 					<span>1/14</span><a href="javascript:;" class="nextBtn"><cite
 						class="icon"></cite></a><input type="text"><a class="jump"
 						href="javascript:;">跳转</a>
-				</p>
+				</p> --%>
 			</div>
 			<img id="requestLoadingTip" class="loadImg" style="display: none;"
 				src="https://img1.write.qq.com/writer/p1/contentv2/loading.gif">

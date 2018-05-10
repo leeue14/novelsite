@@ -33,5 +33,14 @@ public class Category implements Serializable{
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "Category [categoryId=" + categoryId + ", categoryName="
+				+ categoryName + ", parentId=" + parentId + "]";
+	}
+	
+	
+	
+	
 	
 }

@@ -13,10 +13,11 @@ $(function(){
 			type:'POST',
 			dataType : "json",
 			success:function(data){
-				/*alert(data.success);*/
+			
 				if(data.success){
 					window.location.href = data.url;
 				}else{
+					alert(data.errMsg);
 					layer.confirm('你还没有注册作者，是否注册?', {
 						  btn: ['是','否'] //按钮
 						}, function(){

@@ -41,10 +41,17 @@ public class AuthorController {
 		Map<String, Object> modelMap = new HashMap<String, Object>();
 		Long readerId = HttpServletRequestUtil.getLong(request, "readerId");
 		System.out.println(readerId);
-		Author author = authorService.queryAuthor(readerId);
+		Author author = authorService.queryAuthorById(readerId);
+		
+		
 		if(author == null){
+		
 			modelMap.put("success", false);
 			modelMap.put("errMsg", "你还没有注册作者");
+			return modelMap;
+		}else if(author.getStatus() == 0){
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "该账号已被禁用作者功能");
 			return modelMap;
 		}else{
 			modelMap.put("success", true);
@@ -125,7 +132,8 @@ public class AuthorController {
 				return modelMap;
 			}
 			modelMap.put("success", true);
-			author.setCreateTime(new Date());
+			author.setCreateTime(DateFormat.FormatDateSupport(new Date()));
+			author.setStatus(1);
 			authorService.insertAuthor(author);
 			request.getSession().setAttribute("nowDate", DateFormat.FormatDateSupport(new Date()));
 			request.getSession().setAttribute("author", author);

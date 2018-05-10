@@ -33,11 +33,11 @@
 	<div class="wrap login">
 		<div class="header">
 			<div class="headBox pageCenter clearfix">
-				<a href="//write.qq.com"><img class="logo fl"
+				<a href="/novelsite/author/authorcenter"><img class="logo fl"
 					src="https://img1.write.qq.com/writer/p1/contentv2/logo.png"
 					width="225" height="28" alt="阅文·作家专区"></a>
 				<div class="headUser fr">
-					<a class="exit" href="/public/logout.html"><span class="icon"></span>退出登录</a>
+					<a class="exit" href="/novelsite/indexview/index"><span class="icon"></span>退出登录</a>
 				</div>
 			</div>
 		</div>
@@ -214,6 +214,10 @@
 										</div>
 									</div>
 									<div id="sectionEdit" class="zwText">
+										<c:if test="${sessionScope.editCount==0 }">
+										暂无章节，点击新建
+										</c:if>
+										<c:if test="${sessionScope.editCount>0 }">
 										<input id="chapterTitleInput" name="chaptertitle" type="text"
 											placeholder="此处输入章节号与章节名。示例：“第十章 天降奇缘”"
 											value="${sessionScope.chapter.chapterName }"
@@ -221,7 +225,7 @@
 										<textarea name="content" id="chapterContentInput"
 											placeholder="请输入正文。请注意：根据国家相关法律法规要求，请勿上传任何色情、低俗、涉政等违法违规内容，我们将会根据法规进行审核处理和上报。"
 											style="color: rgb(51, 51, 51);">${sessionScope.chapter.body }</textarea>
-
+										</c:if>
 									</div>
 								</div>
 						</div>

@@ -37,7 +37,7 @@
 	</div>
 	<div class="wrap" style="margin-top: -60px;">
 		<div class="personal_logo cf">
-			<a class="logo3" href="#">个人中心LOGO</a>
+			<a class="logo3" href="/novelsite/usercenter/index">个人中心LOGO</a>
 		</div>
 		<!--左边侧栏-->
 		<div class="personal_wrap cf">

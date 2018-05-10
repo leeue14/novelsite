@@ -41,8 +41,13 @@ public class ChapterServiceImpl implements ChapterService{
 	}
 
 	@Override
-	public int findAllChaptersCount(Long bookId,int status) {
+	public Integer findAllChaptersCount(Long bookId,int status) {
 		return chapterDao.findAllChaptersCount(bookId,status);
+	}
+
+	@Override
+	public List<Chapter> findUpdateChapters() {
+		return chapterDao.findUpdateChapters();
 	}
 	
 }

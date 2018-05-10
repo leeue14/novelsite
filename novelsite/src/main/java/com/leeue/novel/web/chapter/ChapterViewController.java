@@ -39,10 +39,15 @@ public class ChapterViewController {
 	@RequestMapping(value="/edit",method=RequestMethod.GET)
 	public String chapterEdit(Model model,HttpServletRequest request){
 		long bookId = HttpServletRequestUtil.getLong(request, "bookId");
+		Book setBook = bookService.queryBookById(bookId);
+		request.getSession().setAttribute("setBook", setBook);
 		//查找所有没有被发布的章节 0表示没有被发布
 		List<Chapter> chapters = chapterService.findAllChapters(bookId,Constants.IS_NO_PUBLISTH);
 		
-		int editCount = chapterService.findAllChaptersCount(bookId,Constants.IS_NO_PUBLISTH);//查找总章节数，草稿
+		Integer editCount = chapterService.findAllChaptersCount(bookId,Constants.IS_NO_PUBLISTH);//查找总章节数，草稿
+		/*if(editCount == null){
+			editCount = 0;
+		}*/
 		if(chapters.isEmpty()){
 			request.getSession().setAttribute("editCount", editCount);
 			request.getSession().removeAttribute("chapters");

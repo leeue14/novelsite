@@ -35,7 +35,7 @@ public class NetBookApi {
 	public static JSONObject searchBook(HttpServletRequest request,
 			String bookName) throws ClientProtocolException, IOException {
 		String data = HttpJsonUtil
-				.getJson("http://novel.juhe.im/search?keyword=" + bookName);
+				.getJson("http://api.zhuishushenqi.com/book/fuzzy-search?query="+ bookName);
 		if (data != null && !data.equals("")) {
 			JSONObject json_test = JSONObject.fromObject(data);
 			return json_test;

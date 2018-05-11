@@ -72,9 +72,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <ul class="cl">
                
                     <li class="dropDown dropDown_hover">
-                        <a href="#" class="dropDown_A">${sessionScope.admin.adminName }<i class="Hui-iconfont">&#xe6d5;</i></a>
+                        <a href="javascript:0;" class="dropDown_A">${sessionScope.admin.adminName }<i class="Hui-iconfont">&#xe6d5;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
-                            <li><a href="/novelsite/admin/adminlogin">切换账户</a></li>
+                            <li><a href="/novelsite/admin">切换账户</a></li>
                             <li><a href="/novelsite/admin/adminloginout">退出</a></li>
                         </ul>
                     </li>
@@ -106,14 +106,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                       <li><a id="getReaders" data-href="/novelsite/authormanage/authormanageindex"data-title="作者管理" href="javascript:void(0)">作者管理</a></li>
                 </ul>
             </dd>
-            
-            <dt><i class="Hui-iconfont">&#xe616;</i>管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-            <dd>
-                <ul>
-                    <li><a data-href="/novelsite/admin/adminmanage" data-title="新增管理员" href="javascript:void(0)">新增管理员</a></li>
-                </ul>
-            </dd>
-            
+            <c:if test="${sessionScope.admin.status==1}">
+            	<dt><i class="Hui-iconfont">&#xe616;</i>管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            	<dd>
+                	<ul>
+                    	<li><a data-href="/novelsite/admin/adminmanage" data-title="新增管理员" href="javascript:void(0)">新增管理员</a></li>
+                	</ul>
+            	</dd>
+            </c:if>
             <dt><i class="Hui-iconfont">&#xe616;</i>新闻管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>

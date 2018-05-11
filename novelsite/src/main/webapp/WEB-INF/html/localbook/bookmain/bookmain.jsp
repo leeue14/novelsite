@@ -134,7 +134,7 @@
 							<p id="textauthor">作者：</p>
 							<p>
 								<a
-									href="#">${sessionScope.localbook.authorName}</a>
+									href="/novelsite/search/searchbook?bookName=${sessionScope.localbook.authorName}&pageNum=1">${sessionScope.localbook.authorName}</a>
 							</p>
 						</div>
 						<div class="shortintro">

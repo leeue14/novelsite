@@ -18,7 +18,7 @@ import com.leeue.novel.entity.Reader;
 @RequestMapping(value="admin")
 public class AdminViewCotrol {
 	
-	@RequestMapping(value="adminlogin")
+	@RequestMapping
 	public String adminLogin(HttpServletRequest request,HttpServletResponse response){
 		
 		return "admin/login/login";
@@ -29,7 +29,7 @@ public class AdminViewCotrol {
 		Admin admin = (Admin) request.getSession().getAttribute("admin");
 		if(admin == null){
 			try {
-				response.sendRedirect("/novelsite/admin/adminlogin");
+				response.sendRedirect("/novelsite/admin");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

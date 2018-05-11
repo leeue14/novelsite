@@ -791,7 +791,7 @@
 										<dd>
 											<!--<em class="iconfont"></em>-->
 											<input type="password" tabindex="2"
-												placeholder="以字母开头，长度在6~18之间，只能包含字母、数字和下划线" id="password">
+												placeholder="密码以字母开头，长度在6~18之间，只能包含字母、数字" id="password">
 										</dd>
 									</dl>
 									<div style="border: 1px solid #e6e6e6;margin-top: 10px;">
@@ -859,7 +859,7 @@
 										<dd>
 											<!--<em class="iconfont"></em>-->
 											<input type="password" tabindex="2"
-												placeholder="以字母开头，长度在6~18之间" id="regist-password">
+												placeholder="密码以字母开头，长度在6~18之间" id="regist-password">
 										</dd>
 										<dd>
 											<!--<em class="iconfont"></em>-->

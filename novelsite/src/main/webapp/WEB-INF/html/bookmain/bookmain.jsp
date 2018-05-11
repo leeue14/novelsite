@@ -133,7 +133,7 @@
 							<p id="textauthor">作者：</p>
 							<p>
 								<a
-									href="#">${sessionScope.modelmapbookinfo.bookinfo.data.author}</a>
+									href="/novelsite/search/searchbook?bookName=${sessionScope.modelmapbookinfo.bookinfo.data.author}&pageNum=1">${sessionScope.modelmapbookinfo.bookinfo.data.author}</a>
 							</p>
 						</div>
 						<div class="shortintro">

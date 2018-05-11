@@ -40,6 +40,7 @@ public class LoginInterceptor implements HandlerInterceptor{
 		}
 		
 		//没有登录
+	//	response.sendRedirect("/novelsite/admin");
 		request.getRequestDispatcher("/novelsite/indexview/index").forward(request, response);;
 		return false;
 	}

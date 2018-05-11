@@ -48,10 +48,12 @@ public class AuthorController {
 		
 			modelMap.put("success", false);
 			modelMap.put("errMsg", "你还没有注册作者");
+			modelMap.put("url", 1);
 			return modelMap;
 		}else if(author.getStatus() == 0){
 			modelMap.put("success", false);
 			modelMap.put("errMsg", "该账号已被禁用作者功能");
+			modelMap.put("url", 2);
 			return modelMap;
 		}else{
 			modelMap.put("success", true);

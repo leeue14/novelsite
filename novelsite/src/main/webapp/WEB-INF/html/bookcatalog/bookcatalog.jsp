@@ -13,7 +13,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>书籍目录JSP</title>
+<title>${sessionScope.modelmapbookinfo.bookinfo.data.title}--目录</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">

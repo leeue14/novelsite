@@ -14,7 +14,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title></title>
+<title>${sessionScope.localbook.name}--正在阅读${requestScope.chapter.chapterName}</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">

@@ -890,6 +890,16 @@
 	</div>
 
 
+<!-- 闲聊么接口接入 
+<script>
+    var xlm_wid='13045';
+    var xlm_url='https://www.xianliao.me/';
+</script>
+<script type='text/javascript' charset='UTF-8' src='https://www.xianliao.me/embed.js'></script>
+-->                                             
+
+
+
 	<!--js代码开始-->
 	<!-- <script src="resources/index/layui.all.js"></script> -->
 	<script src="resources/lib/myfocus/js/myfocus-2.0.1.min.js"

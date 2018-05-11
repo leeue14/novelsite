@@ -89,6 +89,9 @@ public class ChapterViewController {
 			return "chapterwrite/release/release";
 		}
 	
+		//将这本小说加入到session中去
+		Book setBook = bookService.queryBookById(bookId);
+		request.getSession().setAttribute("setBook", setBook);
 		//查找最新一章的内容
 		Chapter lastUpdateChapter = chapters.get(0);
 		request.getSession().setAttribute("chapters", chapters);

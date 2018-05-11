@@ -14,7 +14,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title></title>
+<title>${sessionScope.modelmapbookinfo.bookinfo.data.title}--正在阅读${sessionScope.title}</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">

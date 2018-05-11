@@ -79,7 +79,7 @@
 								<tr>
 									<!-- <td><a href="javascript:;" class="but01"
 										id="addtobookshelf">&nbsp;</a></td> -->
-									<td align="center" ><a id="readNow" href="" alt=",最新章节,目录" class="but02">立即阅读</a></td>
+									<td align="center" ><a id="readNow" href="/novelsite/bookview/bookcatalog?hostId=${sessionScope.hostid}&bookId=${sessionScope.modelmapbookinfo.bookinfo.data._id}" alt=",最新章节,目录" class="but02">立即阅读</a></td>
 								</tr>
 								<!-- <tr>
 									<td><a id="openRewardPopupBtn" href="javascript:;"
@@ -333,6 +333,7 @@
 												<a weibotype="qq" class="toqq" href="javascript:;"></a> </b></li>
 									</c:forEach>
 								</ul>
+								<c:if test="${requestScope.commentPageBean.totalPage>0}">
 								<div class="page">
 									<a
 										href="/novelsite/bookview/bookmain?bookid=${sessionScope.modelmapbookinfo.bookinfo.data._id}&pageNum=1">首页</a>
@@ -361,6 +362,7 @@
 									<a
 										href="/novelsite/bookview/bookmain?bookid=${sessionScope.modelmapbookinfo.bookinfo.data._id}&pageNum=${requestScope.commentPageBean.totalPage }">末页</a>
 								</div>
+								</c:if>
 								<!--page结束-->
 							</div>
 						</div>

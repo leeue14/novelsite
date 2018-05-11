@@ -18,7 +18,7 @@
 <head>
 <base href="<%=basePath%>">
 
-<title>书籍详情JSP</title>
+<title>${sessionScope.localbook.name}-简介</title>
 
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
@@ -338,6 +338,7 @@
 												<a weibotype="qq" class="toqq" href="javascript:;"></a> </b></li>
 									</c:forEach>
 								</ul>
+								<c:if test="${requestScope.commentPageBean.totalPage>0}">
 								<div class="page">
 									<a
 										href="/novelsite/localbook/querybook?bookid=${sessionScope.localbook.bookId}&pageNum=1">首页</a>
@@ -366,6 +367,7 @@
 									<a
 										href="/novelsite/localbook/querybook?bookid=${sessionScope.localbook.bookId}&pageNum=${requestScope.commentPageBean.totalPage }">末页</a>
 								</div>
+								</c:if>
 								<!--page结束-->
 							</div>
 						</div>

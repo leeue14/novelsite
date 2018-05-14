@@ -92,10 +92,10 @@
 					</div>
 					<div class="title">
 						<a href="/novelsite/indexview/index">首页</a>&gt; <a
-							href="http://chuangshi.qq.com/bk/xh/">${sessionScope.modelmapbookinfo.bookinfo.data.majorCate}</a>&gt;
-						<a href="http://chuangshi.qq.com/bk/xh/xx20002/">${sessionScope.modelmapbookinfo.bookinfo.data.minorCate}</a>&gt;
+							href="javascript:0;">${sessionScope.modelmapbookinfo.bookinfo.data.majorCate}</a>&gt;
+						<a href="javascript:0;">${sessionScope.modelmapbookinfo.bookinfo.data.minorCate}</a>&gt;
 						<strong><a
-							href="http://chuangshi.qq.com/bk/xh/AGoENF1oVjYAPFRiATcBbQ-l.html">${sessionScope.modelmapbookinfo.bookinfo.data.title}</a></strong>
+							href="javascript:0;">${sessionScope.modelmapbookinfo.bookinfo.data.title}</a></strong>
 					</div>
 					<div class="num">
 						<table border="0">

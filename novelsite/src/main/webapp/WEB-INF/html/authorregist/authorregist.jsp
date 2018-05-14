@@ -26,7 +26,7 @@
 	<div class="wrap login">
 		<div class="header">
 			<div class="headBox pageCenter clearfix">
-				<a href="/novelsite/author/authorcenter"><img class="logo fl"
+				<a href="javascript:0;"><img class="logo fl"
 					src="https://img1.write.qq.com/writer/p1/contentv2/logo.png"
 					width="225" height="28" alt="阅文·作家专区"></a>
 				<div class="headUser fr">

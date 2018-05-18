@@ -1,5 +1,7 @@
 package com.leeue.novel.entity;
 
+import java.io.Serializable;
+
 /**
  * 管理员实体
  * 功能:

@@ -224,25 +224,25 @@
 							</div>
 							<div class="otherList" id="theAuthorBest">
 								<ul>
-									<li><a href="http://chuangshi.qq.com/bk/ds/20353675.html"
+									<li><a href="javascript:0;"
 										class="green">超等军火商</a></li>
-									<li><a href="http://chuangshi.qq.com/bk/xh/20494776.html"
+									<li><a href="javascript:0;"
 										class="green">狂暴武魂系统</a></li>
-									<li><a href="http://chuangshi.qq.com/bk/ds/20734756.html"
+									<li><a href="javascript:0;"
 										class="green">一拳奶爸</a></li>
-									<li><a href="http://chuangshi.qq.com/bk/xh/20741577.html"
+									<li><a href="javascript:0;"
 										class="green">神帝异世重生</a></li>
-									<li><a href="http://chuangshi.qq.com/bk/ds/20885928.html"
+									<li><a href="javascript:0;"
 										class="green">都市大巫妖</a></li>
-									<li><a href="http://chuangshi.qq.com/bk/js/20269824.html"
+									<li><a href="javascript:0;"
 										class="green">不死小兵</a></li>
-									<li><a href="http://chuangshi.qq.com/bk/ds/20809502.html"
+									<li><a href="javascript:0;"
 										class="green">随身拍卖行</a></li>
-									<li><a href="http://chuangshi.qq.com/bk/ly/20708805.html"
+									<li><a href="javascript:0;"
 										class="green">捉鬼龙王之极品强少</a></li>
-									<li><a href="http://chuangshi.qq.com/bk/xx/20702016.html"
+									<li><a href="javascript:0;"
 										class="green">都市之极品仙少</a></li>
-									<li><a href="http://chuangshi.qq.com/bk/qh/20613476.html"
+									<li><a href="javascript:0;"
 										class="green">穿越万界改剧情</a></li>
 								</ul>
 							</div>
